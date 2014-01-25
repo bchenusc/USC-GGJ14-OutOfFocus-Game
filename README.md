@@ -69,4 +69,6 @@ Level Design Implementation
 
 Artistic Direction 
 -------
-**JOSH NEEDS TO PUT THINGS HERE!**
++ Cute character
++ Pastel color scheme - low stress environment
++ Skewed perspective (strict top-down gameplay) - see Pokemon for inspiration
