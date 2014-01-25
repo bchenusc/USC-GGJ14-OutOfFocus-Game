@@ -14,7 +14,8 @@ public class testScript : MonoBehaviour {
 			Timer.Instance.Add("Timer",
 			                   Foo,
 			                   1.0f,
-			                   true);
+			                   true,
+			                   5);
 		}
 	}
 
