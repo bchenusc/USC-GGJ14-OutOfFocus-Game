@@ -1,10 +1,10 @@
 [GAME NAME HERE]
 =====
-Programmer: Matthew Pohlmann, Brian Chen
-Implementation: Bryan Chong, Jeffrey Chao
-Artist: Josh DiGiovanni
-Level Design: Omar Khulusi, David Zhang
-Documentation / Floater: Bryan Chong
+Programmer: Matthew Pohlmann, Brian Chen <br/>
+Implementation: Bryan Chong, Jeffrey Chao <br/>
+Artist: Josh DiGiovanni <br/>
+Level Design: Omar Khulusi, David Zhang <br/>
+Documentation / Floater: Bryan Chong <br/>
 
 *"We don’t see things as they are, we see them as we are."* <br/>
 > **Concept behind this design**
