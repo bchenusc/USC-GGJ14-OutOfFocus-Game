@@ -12,3 +12,8 @@ Quantum Dynamics
 > To you nothing is happening unless you’re looking at it so you take a picture
 
 ------
+
+Overview
+-------
+
+Top-down 2D puzzle adventure game with limited field of vision in which only objects that are within the player's field of view are active (i.e. if you don't look at a door that is closing, it won't continue to close until you look at it again). To get around this limitation, the player has the ability to place a "camcorder" that provides a live view of a distant location, meaning that the object that the camera can see acts as if it is being viewed by the player.
