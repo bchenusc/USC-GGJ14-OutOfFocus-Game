@@ -1,4 +1,4 @@
-1337 GAME TITLE {#top}
+1337 GAME TITLE
 =======
 **Lead Programmers:** Matthew Pohlmann, Brian Chen <br/>
 **Programmers:** Bryan Chong, Jeffrey Chao <br/>
@@ -24,7 +24,7 @@ Overview
 
 Premise/Setting
 -------
-THIS IS WHERE SOMEONE PUTS SOME STORYLINE TO FIT THIS GAME!
+**THIS IS WHERE SOMEONE PUTS SOME STORYLINE TO FIT THIS GAME!**
 
 
 Platform
@@ -69,4 +69,4 @@ Level Design Implementation
 
 Artistic Direction 
 -------
-JOSH NEEDS TO PUT THINGS HERE!
+**JOSH NEEDS TO PUT THINGS HERE!**
