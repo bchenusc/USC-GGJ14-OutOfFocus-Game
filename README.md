@@ -1,10 +1,10 @@
-[GAME NAME HERE]
+Quantum Dynamics
 =====
-Programmer: Matthew Pohlmann, Brian Chen <br/>
-Implementation: Bryan Chong, Jeffrey Chao <br/>
-Artist: Josh DiGiovanni <br/>
-Level Design: Omar Khulusi, David Zhang <br/>
-Documentation / Floater: Bryan Chong <br/>
+**Programmer:** Matthew Pohlmann, Brian Chen <br/>
+**Implementation:** Bryan Chong, Jeffrey Chao <br/>
+**Artist:** Josh DiGiovanni <br/>
+**Level Design:** Omar Khulusi, David Zhang <br/>
+**Documentation / Floater:** Bryan Chong <br/>
 
 *"We don’t see things as they are, we see them as we are."* <br/>
 > **Concept behind this design**
