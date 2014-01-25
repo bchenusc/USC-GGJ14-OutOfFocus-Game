@@ -1,7 +1,7 @@
 1337 GAME TITLE
 =======
 **Lead Programmers:** Matthew Pohlmann, Brian Chen <br/>
-**Programmers:** Bryan Chong, Jeffrey Chao <br/>
+**Programmers:** Bryan Chong, Jeffrey Chau <br/>
 **Lead Artist:** Josh DiGiovanni <br/>
 **Lead Designer:** Omar Khulusi, David Zhang <br/>
 **Documentation / Floater:** Bryan Chong <br/>
@@ -22,7 +22,7 @@ Overview
 -------
 **[1337 GAME TITLE]** is a top-down 2D puzzle adventure game with limited field of vision in which only objects that are within the player's field of view are active (i.e. if you don't look at a door that is closing, it won't continue to close until you look at it again). To get around this limitation, the player has the ability to place a "camcorder" that provides a live view of a distant location, meaning that the object that the camera can see acts as if it is being viewed by the player.
 
-Premise/Setting
+Premise / Setting
 -------
 **THIS IS WHERE SOMEONE PUTS SOME STORYLINE TO FIT THIS GAME!**
 
