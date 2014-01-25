@@ -46,5 +46,3 @@ Game made for the 2014 Global Game Jam by: Matthew Pohlmann, Jeffrey Chau, Brian
 > Josh: "So this is now a dating sim?"
 > **LOLOLOLOLOL**
 > Jeff: "I'm out."
-
-> Brian: "That ass-calated quickly."
