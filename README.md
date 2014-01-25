@@ -1,8 +1,6 @@
 Global Game Jam 2014
 =====
-"We don’t see things as they are, we see them as we are." <br/>
-Game made for the 2014 Global Game Jam by: Matthew Pohlmann, Jeffrey Chau, Brian Chen, Bryan Chong, Josh DiGiovanni, Omar Khulusi, David Zhang 
-
+"We don’t see things as they are, we see them as we are." 
 
 ------
 ### **Brainstorming Ideas**
