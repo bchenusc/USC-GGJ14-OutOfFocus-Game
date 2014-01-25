@@ -4,7 +4,7 @@ using System.Collections.Generic;
 
 /*
  * How to use:
- * 1. Call the functions. Only one instance of Timer should exist in the scene at all times.
+ * 1. Call the functions. Only one instance of TimerManager should exist in the scene at all times.
  * 
  * Notes:
  * 1. When you add a timer, the first call back is what you want the timer to do when the timer fires.
@@ -15,7 +15,7 @@ using System.Collections.Generic;
  * 
 */
 
-public class Timer : Singleton<Timer> {
+public class TimerManager : Singleton<TimerManager> {
 	
 	public class TimerInstance {
 		
@@ -44,7 +44,7 @@ public class Timer : Singleton<Timer> {
 	private SortedList<string, TimerInstance> sl_pending = new SortedList<string, TimerInstance>();
 	private SortedList<string, TimerInstance> sl_active = new SortedList<string, TimerInstance>();
 
-	protected Timer() {} // Guarantees Timer will always be a singleton and cannot be instantiated
+	protected TimerManager() {} // Guarantees Timer will always be a singleton and cannot be instantiated
 	
 	public void Update () {
 		//Move from pending up to active.
