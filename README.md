@@ -1,7 +1,7 @@
 Global Game Jam 2014
 =====
 "We don’t see things as they are, we see them as we are." </br>
-Game made for the 2014 Global Game Jam by: Matthew Pohlmann, Jeffrey Chau, Brian Chen, Bryan Chong, Josh DiGiovanni, Omar Khulusi, David Zhang, 
+Game made for the 2014 Global Game Jam by: Matthew Pohlmann, Jeffrey Chau, Brian Chen, Bryan Chong, Josh DiGiovanni, Omar Khulusi, David Zhang 
 
 
 ------
@@ -29,20 +29,20 @@ Game made for the 2014 Global Game Jam by: Matthew Pohlmann, Jeffrey Chau, Brian
 20. [?] Random points in the game, the objective is to sabotage the enemy.
 21. [?] First person horror game where you randomly switch roles.
 
-> ~ Brian: "FUCK THE JUDGES." </br>
-> ~ Brian: "ALL THIS THINKING AND IT WENT DOWN THE DRAIN." </br>
-> ~ Brian: "WHO PULLED THIS GAME OUT OF THEIR ASS." </br>
-> ~ Brian: "Let's keep the idea FLOWING guys." </br>
+> ~ Brian: "FUCK THE JUDGES."
+> ~ Brian: "ALL THIS THINKING AND IT WENT DOWN THE DRAIN."
+> ~ Brian: "WHO PULLED THIS GAME OUT OF THEIR ASS." 
+> ~ Brian: "Let's keep the idea FLOWING guys." 
 > ~ Omar: "It's like Game of Thrones (Porcelean Throne) with Brian and me every morning." </br>
 
-> **INTRODUCES THE SHIT GAME TO DAVID** </br>
-> David: "Are you guys serious. That's going to be hard." </br>
+> **INTRODUCES THE SHIT GAME TO DAVID**
+> David: "Are you guys serious. That's going to be hard."
 > **EVERYONE LAUGHS**
 
-> **COMMENTARY TO IDEA 9** </br>
+> **COMMENTARY TO IDEA 9**
 > David: "Oh, now it's a race game."
 
-> Brian: We should make a shit game!" </br> 
-> Josh: "So this is now a dating sim?" </br>
-> **LOLOLOLOLOL** </br>
+> Brian: We should make a shit game!" 
+> Josh: "So this is now a dating sim?"
+> **LOLOLOLOLOL**
 > Jeff: "I'm out."
