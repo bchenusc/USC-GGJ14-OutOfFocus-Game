@@ -20,16 +20,19 @@ public class InputManager : Singleton<InputManager> {
 	private Action OnLeftMouseButtonDown;
 	private Action OnRightMouseButtonDown;
 	private Action OnKeyPressed;
+	private Action OnKeyHeld;
 	#endregion
 	
 	// Update is called once per frame
 	void Update () {
-		if (Input.GetMouseButtonDown(0))
+		if (OnLeftMouseButtonDown != null && Input.GetMouseButtonDown(0))
 			OnLeftMouseButtonDown();
-		if (Input.GetMouseButtonDown(1))
+		if (OnRightMouseButtonDown != null && Input.GetMouseButtonDown(1))
 			OnRightMouseButtonDown();
-		if (Input.anyKeyDown)
+		if (OnKeyPressed != null && Input.anyKeyDown)
 			OnKeyPressed();
+		if (OnKeyHeld != null && Input.anyKey)
+			OnKeyHeld();
 	}
 
 	#region register functions
@@ -44,6 +47,10 @@ public class InputManager : Singleton<InputManager> {
 	public void RegisterOnKeyPressed(Action a) {
 		OnKeyPressed += a;
 	}
+
+	public void RegisterOnKeyHeld(Action a) {
+		OnKeyHeld += a;
+	}
 	#endregion
 
 	#region deregister functions
@@ -57,6 +64,10 @@ public class InputManager : Singleton<InputManager> {
 
 	public void DeregisterOnKeyPressed(Action a) {
 		OnKeyPressed -= a;
+	}
+
+	public void DeregisterOnKeyHeld(Action a) {
+		OnKeyHeld -= a;
 	}
 	#endregion
 
