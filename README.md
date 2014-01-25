@@ -7,7 +7,7 @@ Quantum Dynamics
 **Documentation / Floater:** Bryan Chong <br/>
 
 *"We don’t see things as they are, we see them as we are."* <br/>
-> **Concept behind this design**
+> **Concept behind this design:** <br/>
 > Tree falls in the forest, see or else it doesn’t exist or it's paused. <br/>
 > To you nothing is happening unless you’re looking at it so you take a picture
 
