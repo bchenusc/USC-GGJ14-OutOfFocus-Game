@@ -20,7 +20,7 @@ public class Door : MonoBehaviour {
 	Animator animator;
 	
 	public bool b_IsOpen = false; //changeable from the inspector.
-	
+
 
 	void Start(){
 		animator = transform.GetComponent<Animator>();
