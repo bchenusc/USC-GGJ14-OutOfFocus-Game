@@ -34,6 +34,7 @@ public class DoorButton : MonoBehaviour {
 			b_IsPressed = !b_IsPressed;
 			animator.SetBool("ButtonPress", true);
 			scr_doorScript.ToggleDoor();
+			AudioManager.Instance.PlaySoundEffect("button", gameObject);
 		}
 	}
 	
