@@ -93,8 +93,8 @@ public class PlayerMove : MonoBehaviour {
 
 	#region camcorder functions
 	void PlaceCamera() {
-		// 'C' to place a camcorder
-		if (Input.GetKeyDown(KeyCode.C)) {
+		// 'F' to place a camcorder
+		if (Input.GetKeyDown(KeyCode.F)) {
 			if (numCameras > 0) {
 				numCameras--;
 				Instantiate(cameraPrefab, transform.position, Quaternion.identity);
@@ -106,6 +106,10 @@ public class PlayerMove : MonoBehaviour {
 				Destroy(nearbyCameras[0]);
 				nearbyCameras.RemoveAt(0);
 				numCameras++;
+				if (nearbyCameras.Count == 0 && pickupCamera != null) {
+					Destroy(pickupCamera);
+					pickupCamera = null;
+				}
 			}
 		}
 	}
@@ -114,7 +118,7 @@ public class PlayerMove : MonoBehaviour {
 		if (other.CompareTag("Camcorder")) {
 			if (nearbyCameras.Count == 0) {
 				pickupCamera = Instantiate(pickupCameraPrefab, 
-				                           new Vector3(other.transform.position.x + .25f, other.transform.position.y + .25f, 0),
+				                           new Vector3(other.transform.position.x + .4f, other.transform.position.y + .4f, 0),
 				                           Quaternion.identity) as GameObject;
 			}
 			nearbyCameras.Add(other.gameObject);
