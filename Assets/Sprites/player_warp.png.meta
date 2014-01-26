@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 58893c55225cefa4c9083af4a7e308f0
+guid: 0c3ec98594cac994a9c8f9499219b15f
 TextureImporter:
   serializedVersion: 2
   mipmaps:
@@ -45,7 +45,7 @@ TextureImporter:
     compressionQuality: 50
   spriteSheet:
     sprites:
-    - name: exit_warp_panel_0
+    - name: player_warp_0
       rect:
         serializedVersion: 2
         x: 0
@@ -54,10 +54,28 @@ TextureImporter:
         height: 64
       alignment: 0
       pivot: {x: .5, y: .5}
-    - name: exit_warp_panel_1
+    - name: player_warp_1
       rect:
         serializedVersion: 2
         x: 64
+        y: 0
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: .5, y: .5}
+    - name: player_warp_2
+      rect:
+        serializedVersion: 2
+        x: 128
+        y: 0
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: .5, y: .5}
+    - name: player_warp_3
+      rect:
+        serializedVersion: 2
+        x: 192
         y: 0
         width: 64
         height: 64
