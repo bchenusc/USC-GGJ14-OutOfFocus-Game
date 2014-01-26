@@ -24,7 +24,6 @@ public class FOV : MonoBehaviour {
 			Vector3 distance = new Vector3(hit.point.x, hit.point.y, 0) - transform.position;
 			distance.z = 0;
 			transform.localScale = new Vector3 (Mathf.Clamp(Vector3.Magnitude(distance) / 3.0f, 0.05f, 1),  Mathf.Clamp(distance.magnitude / 3.0f, 0.05f, 1) , transform.localScale.z);
-			Debug.Log (hit.transform + " , " + Vector3.Magnitude(distance) / 3);
 		}else {
 			transform.localScale = Vector3.one;
 		}
@@ -51,14 +50,16 @@ public class FOV : MonoBehaviour {
 	void OnTriggerEnter2D(Collider2D other){
 		if (other.transform != transform && other.transform != pivot){
 			if (other.transform.CompareTag("Door")){
-
+				other.transform.GetComponent<Door>().b_canOpen = true;
 			}
 		}
 	}
 
 	void OnTriggerExit2D(Collider2D other){
-		if (other.transform != transform && other.transform != pivot){
-
-		}
+			Debug.Log ("in trigger");
+			if (other.transform.CompareTag("Door")){
+				Debug.Log("in door");
+				other.transform.GetComponent<Door>().b_canOpen = false;
+			}
 	}
 }

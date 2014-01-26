@@ -14,6 +14,7 @@ using System.Collections;
 public class Door : MonoBehaviour {
 	
 	public Transform t_button;
+	public bool b_canOpen = false;
 	
 	Animator animator;
 	
@@ -24,7 +25,8 @@ public class Door : MonoBehaviour {
 	}
 	
 	#region Used By Other Scripts
-	public void ToggleDoor(){
+	public bool ToggleDoor(){
+		if (!b_canOpen) return false;
 		b_IsOpen = !b_IsOpen;
 		if (b_IsOpen){
 			gameObject.layer = 9;
@@ -33,6 +35,7 @@ public class Door : MonoBehaviour {
 		}
 		transform.GetComponent<BoxCollider2D>().isTrigger = b_IsOpen;
 		animator.SetBool("DoorOpen", b_IsOpen);
+		return  true;
 	}
 	
 	#endregion
