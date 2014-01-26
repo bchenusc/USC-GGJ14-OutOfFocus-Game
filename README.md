@@ -58,15 +58,15 @@ The player's vision is represented as a cone in the direction of the mouse that 
 Level Design Implementation
 -------
 ####In-Game Objects
-+ ![Player](https://github.com/Valakor/GameJam2014/blob/master/Assets/Sprites/sm_player.png?raw=true) Player: The player is '1' arbitrary unit squared
-+ ![Windows](https://github.com/Valakor/GameJam2014/blob/master/Assets/Sprites/sm_window.png?raw=true) Windows: You can look through but you can't pass it
-+ ![Camcorder](https://github.com/Valakor/GameJam2014/blob/master/Assets/Sprites/sm_cam.png?raw=true) "Camcorder": Provides same cone of vision from afar
-+ ![Moving platform](https://github.com/Valakor/GameJam2014/blob/master/Assets/Sprites/sm_platform.png?raw=true) Moving platform
-+ ![Doors](https://github.com/Valakor/GameJam2014/blob/master/Assets/Sprites/sm_door.png?raw=true) Doors
-+ ![Buttons](https://github.com/Valakor/GameJam2014/blob/master/Assets/Sprites/sm_button.png?raw=true) Buttons
-+ ![Walls](https://github.com/Valakor/GameJam2014/blob/master/Assets/Sprites/sm_wall.png?raw=true) Walls
-+ ![Pitfall](https://github.com/Valakor/GameJam2014/blob/master/Assets/Sprites/sm_pitfall.png?raw=true) Pitfall
-+ (-) Light Switches
+![Player](https://github.com/Valakor/GameJam2014/blob/master/Assets/Sprites/sm_player.png?raw=true) Player: The player is '1' arbitrary unit squared
+![Windows](https://github.com/Valakor/GameJam2014/blob/master/Assets/Sprites/sm_window.png?raw=true) Windows: You can look through but you can't pass it
+![Camcorder](https://github.com/Valakor/GameJam2014/blob/master/Assets/Sprites/sm_cam.png?raw=true) Camcorder: Provides same cone of vision from afar
+![Moving platform](https://github.com/Valakor/GameJam2014/blob/master/Assets/Sprites/sm_platform.png?raw=true) Moving platform
+![Doors](https://github.com/Valakor/GameJam2014/blob/master/Assets/Sprites/sm_door.png?raw=true) Doors
+![Buttons](https://github.com/Valakor/GameJam2014/blob/master/Assets/Sprites/sm_button.png?raw=true) Buttons
+![Walls](https://github.com/Valakor/GameJam2014/blob/master/Assets/Sprites/sm_wall.png?raw=true) Walls
+![Pitfall](https://github.com/Valakor/GameJam2014/blob/master/Assets/Sprites/sm_pitfall.png?raw=true) Pitfall
+(-) Light Switches
 
 
 Artistic Direction 
