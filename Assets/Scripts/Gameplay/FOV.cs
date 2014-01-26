@@ -14,10 +14,18 @@ public class FOV : MonoBehaviour {
 		playerToMouse = Vector3.Normalize (playerToMouse);
 		//Axis is Vector z
 
-		float angle = Mathf.Acos ((Vector3.Dot (playerToMouse, new Vector3(1,0,0) )));
-		Debug.Log (angle);
+		float angle = Mathf.Acos ((Vector3.Dot (playerToMouse, Vector3.right )));
+		if (angle > Mathf.PI && angle < Mathf.PI * 2) {
+			angle =  2 *Mathf.PI - angle;
+		}
+		angle = angle *180/Mathf.PI - 90;
 
-		Quaternion rotation = Quaternion.AngleAxis (angle * 180 / Mathf.PI  - 90, Vector3.forward);
+		if (Camera.main.ScreenToWorldPoint (Input.mousePosition).y < transform.position.y)
+		{
+			angle = 180 - angle;
+		}
+
+		Quaternion rotation = Quaternion.AngleAxis (angle, Vector3.forward);
 
 		transform.rotation = rotation;
 
