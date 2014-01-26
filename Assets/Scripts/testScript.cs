@@ -5,10 +5,7 @@ public class testScript : MonoBehaviour {
 
 	// Use this for initialization
 	void Start () {
-		InputManager.Instance.RegisterOnLeftMouseButtonDown(Bar);
-		InputManager.Instance.RegisterOnLeftMouseButtonDown(PrintA);
-		InputManager.Instance.RegisterOnRightMouseButtonDown(FooBar);
-		InputManager.Instance.RegisterOnKeyPressed(MakeTimer);
+		InputManager.Instance.RegisterOnKeyPressed(PlayMusic);
 	}
 	
 	// Update is called once per frame
@@ -16,29 +13,14 @@ public class testScript : MonoBehaviour {
 
 	}
 
-	void Foo () {
-		Debug.Log("Foo");
-	}
-
-	void Bar () {
-		Debug.Log("Bar");
-	}
-
-	void PrintA() {
-		Debug.Log("A");
-	}
-
-	void FooBar() {
-		InputManager.Instance.DeregisterOnLeftMouseButtonDown(Bar);
-	}
-
-	void MakeTimer() {
+	void PlayMusic() {
 		if (Input.GetKeyDown(KeyCode.DownArrow)) {
-			TimerManager.Instance.Add("Timer",
-			                          Foo,
-			                          1.0f,
-			                          true,
-			                          5);
+			Debug.Log("music");
+			AudioManager.Instance.PlayMusic("MainTheme");
+		}
+		if (Input.GetKeyDown(KeyCode.UpArrow)) {
+			Debug.Log("sound effect");
+			AudioManager.Instance.PlaySoundEffect("sword", this.gameObject);
 		}
 	}
 }
