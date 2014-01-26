@@ -30,7 +30,12 @@ public class AudioManager : Singleton<AudioManager> {
 
 	public void PlayMusic(string toPlay, float volume = 0.08f) {
 		musicPlayer.Stop();
-		musicPlayer.clip = music[toPlay];
+		try {
+			musicPlayer.clip = music[toPlay];
+		} catch(KeyNotFoundException e) {
+			Debug.LogWarning("AudioManager::PlayMusic(" + toPlay + "): Clip of this name not found.");
+			return;
+		}
 		musicPlayer.volume = volume;
 		musicPlayer.Play();
 	}
@@ -40,7 +45,12 @@ public class AudioManager : Singleton<AudioManager> {
 	}
 
 	public void PlaySoundEffect(string toPlay, GameObject location, float volume = 1.0f) {
-		PlayClipAtLocation(sounds[toPlay], location.transform.position, volume);
+		try {
+			PlayClipAtLocation(sounds[toPlay], location.transform.position, volume);
+		} catch(KeyNotFoundException e) {
+			Debug.LogWarning("AudioManager::PlaySoundEffect(" + toPlay + "): Clip of this name not found.");
+			return;
+		}
 	}
 
 	#region helper
