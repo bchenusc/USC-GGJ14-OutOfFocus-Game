@@ -45,7 +45,7 @@ TextureImporter:
     compressionQuality: 50
   spriteSheet:
     sprites:
-    - name: player_sheet_0
+    - name: downIdle
       rect:
         serializedVersion: 2
         x: 0
@@ -53,8 +53,8 @@ TextureImporter:
         width: 64
         height: 64
       alignment: 0
-      pivot: {x: 0, y: 0}
-    - name: player_sheet_1
+      pivot: {x: .5, y: .5}
+    - name: down1
       rect:
         serializedVersion: 2
         x: 64
@@ -62,8 +62,8 @@ TextureImporter:
         width: 64
         height: 64
       alignment: 0
-      pivot: {x: 0, y: 0}
-    - name: player_sheet_2
+      pivot: {x: .5, y: .5}
+    - name: down2
       rect:
         serializedVersion: 2
         x: 128
@@ -71,8 +71,8 @@ TextureImporter:
         width: 64
         height: 64
       alignment: 0
-      pivot: {x: 0, y: 0}
-    - name: player_sheet_3
+      pivot: {x: .5, y: .5}
+    - name: down3
       rect:
         serializedVersion: 2
         x: 192
@@ -80,8 +80,8 @@ TextureImporter:
         width: 64
         height: 64
       alignment: 0
-      pivot: {x: 0, y: 0}
-    - name: player_sheet_4
+      pivot: {x: .5, y: .5}
+    - name: rightIdle
       rect:
         serializedVersion: 2
         x: 0
@@ -89,8 +89,8 @@ TextureImporter:
         width: 64
         height: 64
       alignment: 0
-      pivot: {x: 0, y: 0}
-    - name: player_sheet_5
+      pivot: {x: .5, y: .5}
+    - name: right1
       rect:
         serializedVersion: 2
         x: 64
@@ -98,8 +98,8 @@ TextureImporter:
         width: 64
         height: 64
       alignment: 0
-      pivot: {x: 0, y: 0}
-    - name: player_sheet_6
+      pivot: {x: .5, y: .5}
+    - name: right2
       rect:
         serializedVersion: 2
         x: 128
@@ -107,8 +107,8 @@ TextureImporter:
         width: 64
         height: 64
       alignment: 0
-      pivot: {x: 0, y: 0}
-    - name: player_sheet_7
+      pivot: {x: .5, y: .5}
+    - name: right3
       rect:
         serializedVersion: 2
         x: 192
@@ -116,17 +116,17 @@ TextureImporter:
         width: 64
         height: 64
       alignment: 0
-      pivot: {x: 0, y: 0}
-    - name: player_sheet_8
+      pivot: {x: .5, y: .5}
+    - name: upIdle
       rect:
         serializedVersion: 2
-        x: 0
+        x: 1
         y: 0
         width: 64
         height: 64
       alignment: 0
-      pivot: {x: 0, y: 0}
-    - name: player_sheet_9
+      pivot: {x: .5, y: .5}
+    - name: up1
       rect:
         serializedVersion: 2
         x: 64
@@ -134,8 +134,8 @@ TextureImporter:
         width: 64
         height: 64
       alignment: 0
-      pivot: {x: 0, y: 0}
-    - name: player_sheet_10
+      pivot: {x: .5, y: .5}
+    - name: up2
       rect:
         serializedVersion: 2
         x: 128
@@ -143,8 +143,8 @@ TextureImporter:
         width: 64
         height: 64
       alignment: 0
-      pivot: {x: 0, y: 0}
-    - name: player_sheet_11
+      pivot: {x: .5, y: .5}
+    - name: up3
       rect:
         serializedVersion: 2
         x: 192
@@ -152,6 +152,6 @@ TextureImporter:
         width: 64
         height: 64
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: .5, y: .5}
   spritePackingTag: 
   userData: 
