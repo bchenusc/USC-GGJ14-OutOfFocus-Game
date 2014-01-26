@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 60ce4c44c1f64324690a954f25c336b5
+guid: c556cc46f0ef35b4184b97b6a82e61c6
 TextureImporter:
   serializedVersion: 2
   mipmaps:
@@ -45,16 +45,7 @@ TextureImporter:
     compressionQuality: 50
   spriteSheet:
     sprites:
-    - name: floor_0
-      rect:
-        serializedVersion: 2
-        x: 0
-        y: 0
-        width: 192
-        height: 64
-      alignment: 0
-      pivot: {x: .5, y: .5}
-    - name: floor_1
+    - name: red_button_sheet_0
       rect:
         serializedVersion: 2
         x: 0
@@ -63,19 +54,10 @@ TextureImporter:
         height: 64
       alignment: 0
       pivot: {x: .5, y: .5}
-    - name: floor_2
+    - name: red_button_sheet_1
       rect:
         serializedVersion: 2
         x: 64
-        y: 0
-        width: 64
-        height: 64
-      alignment: 0
-      pivot: {x: .5, y: .5}
-    - name: floor_3
-      rect:
-        serializedVersion: 2
-        x: 128
         y: 0
         width: 64
         height: 64

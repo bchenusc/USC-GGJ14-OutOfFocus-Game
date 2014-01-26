@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 60ce4c44c1f64324690a954f25c336b5
+guid: 484a1a4d659effb4a980e607deacb775
 TextureImporter:
   serializedVersion: 2
   mipmaps:
@@ -45,7 +45,7 @@ TextureImporter:
     compressionQuality: 50
   spriteSheet:
     sprites:
-    - name: floor_0
+    - name: inside_wall_0
       rect:
         serializedVersion: 2
         x: 0
@@ -54,7 +54,7 @@ TextureImporter:
         height: 64
       alignment: 0
       pivot: {x: .5, y: .5}
-    - name: floor_1
+    - name: inside_wall_1
       rect:
         serializedVersion: 2
         x: 0
@@ -63,19 +63,19 @@ TextureImporter:
         height: 64
       alignment: 0
       pivot: {x: .5, y: .5}
-    - name: floor_2
+    - name: inside_wall_2
       rect:
         serializedVersion: 2
-        x: 64
+        x: 128
         y: 0
         width: 64
         height: 64
       alignment: 0
       pivot: {x: .5, y: .5}
-    - name: floor_3
+    - name: inside_wall_3
       rect:
         serializedVersion: 2
-        x: 128
+        x: 64
         y: 0
         width: 64
         height: 64
