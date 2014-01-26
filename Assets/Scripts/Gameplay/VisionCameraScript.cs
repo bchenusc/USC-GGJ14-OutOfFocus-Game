@@ -10,6 +10,7 @@ public class VisionCameraScript : MonoBehaviour {
 
 	void Start(){
 		doors = GameObject.FindObjectsOfType<Door>();
+
 	}
 
 	void FixedUpdate(){
