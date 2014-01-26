@@ -5,23 +5,22 @@ Global Game Jam 2014
 ------
 
 **Potential Title**
-1. Fuck the Judges (ALL)
-2. Kitten with a Camcorder (David)
-3. It's a Dating Sim (Brian)
-4. + Narrow Sided (David)
-5. Narrow Minded (David)
-6. Narrow Penis (David)
-7. + Out of Focus (Jeffrey)
-8. In Focus (David)
-9. Always A Love Story (Brian)
-10. It's Not A Cat (Josh)
-11. It's Not A Cat, It's a Dating Sim (Josh)
-12. The World Revolves Around You (Jeff)
-13. Global Camcorder Jam (Brian)
-14. + Where's My Camera (Brian)
-15. Your Mom Is A Fucking Camera (Matt)
-16. It's Not A Camera, It's a Camcorder (Bryan)
-17. Lighter Than Camera (Josh)
+1. Fuck the Judges <br/>
+2. Kitten with a Camcorder <br/>
+3. It's a Dating Sim <br/>
+4. Narrow Sided <br/>
+5. Narrow Minded <br/>
+6. Out of Focus <br/>
+7. In Focus <br/>
+8. Always A Love Story <br/>
+9. It's Not A Cat <br/>
+10. It's Not A Cat, It's a Dating Sim <br/>
+11. The World Revolves Around You <br/>
+12. Global Camcorder Jam <br/>
+13. Where's My Camera <br/>
+14. Your Mom Is A Fucking Camera <br/>
+15. It's Not A Camera, It's a Camcorder <br/>
+16. Lighter Than Camera
 
 ------
 ### **Brainstorming Ideas**
