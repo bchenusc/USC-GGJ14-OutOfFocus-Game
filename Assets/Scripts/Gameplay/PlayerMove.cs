@@ -79,6 +79,7 @@ public class PlayerMove : MonoBehaviour {
 			if (numCameras > 0) {
 				numCameras--;
 				Quaternion rotation = GetQuaternionOfCamera();
+				Debug.Log (rotation);
 				Instantiate(cameraPrefab, transform.position, rotation);
 			}
 		}
@@ -98,10 +99,10 @@ public class PlayerMove : MonoBehaviour {
 
 	private Quaternion GetQuaternionOfCamera(){
 		switch (direction){
-		case Facing.up: return Quaternion.identity;
-		case Facing.moveUp: return Quaternion.identity;
-		case Facing.down: return Quaternion.AngleAxis(180, Vector3.forward);
-		case Facing.moveDown : return Quaternion.AngleAxis(180, Vector3.forward);
+		case Facing.up: return Quaternion.AngleAxis(180, Vector3.forward);
+		case Facing.moveUp:return Quaternion.AngleAxis(180, Vector3.forward);
+		case Facing.down: return Quaternion.identity;
+		case Facing.moveDown : return Quaternion.identity;
 		case Facing.left : return Quaternion.AngleAxis(270, Vector3.forward);
 		case Facing.moveLeft: return Quaternion.AngleAxis(270, Vector3.forward);
 		case Facing.right : return Quaternion.AngleAxis(90, Vector3.forward);
