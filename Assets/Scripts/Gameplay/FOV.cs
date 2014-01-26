@@ -30,4 +30,11 @@ public class FOV : MonoBehaviour {
 		transform.rotation = rotation;
 
 	}
+
+	void OnTriggerEnter2D(Collider2D other){
+		if (other.transform != null){
+			Debug.Log("hit something");
+		}
+
+	}
 }
