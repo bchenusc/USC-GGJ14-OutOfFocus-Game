@@ -56,6 +56,8 @@ public class PlatformScript : MonoBehaviour {
 		} else if (other.CompareTag("Player") && GameManager.Instance.playerAlive) {
 			other.transform.parent.parent = transform;
 			other.gameObject.GetComponent<PlayerMove>().onPlatform = true;
+		} else if (other.CompareTag("Camcorder")) {
+			other.transform.parent = transform;
 		}
 	}
 
@@ -63,6 +65,8 @@ public class PlatformScript : MonoBehaviour {
 		if (other.CompareTag("Player")) {
 			other.transform.parent.parent = null;
 			other.gameObject.GetComponent<PlayerMove>().onPlatform = false;
+		} else if (other.CompareTag("Camcorder")) {
+			other.transform.parent = null;
 		}
 	}
 
