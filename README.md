@@ -1,4 +1,4 @@
-1337 GAME TITLE
+Out of Focus
 =======
 **Lead Programmers:** Matthew Pohlmann, Brian Chen <br/>
 **Programmers:** Bryan Chong, Jeffrey Chau <br/>
@@ -6,11 +6,11 @@
 **Lead Designer:** Omar Khulusi, David Zhang <br/>
 **Documentation / Floater:** Bryan Chong <br/>
 
-This is the Game Design Document for **[1337 GAME TITLE]** built for the 2014 Global Game Jam. This documentation describes our vision of the game.
+This is the Game Design Document for **Out of Focus** built for the 2014 Global Game Jam. This documentation describes our vision of the game.
 
 > We don’t see things as they are, we see them as we are. (Anaïs Nin)
 
-Drawing from quantum physics, **[1337 GAME TITLE]** explores the concept of how we, humans, perceive the working world. Objects can only function when being perceived, rather than existing through the laws of normative physics. Each human being possess an individual understanding of the world that consists of only their immediate surroundings; anything else bears no significance to the individual.
+Drawing from quantum physics, **Out of Focus** explores the concept of how we, humans, perceive the working world. Objects can only function when being perceived, rather than existing through the laws of normative physics. Each human being possess an individual understanding of the world that consists of only their immediate surroundings; anything else bears no significance to the individual.
 
 -------
 
@@ -21,11 +21,18 @@ Terminology and Symbols
 
 Overview
 -------
-**[1337 GAME TITLE]** is a top-down 2D puzzle adventure game with limited field of vision in which only objects that are within the player's field of view are active (i.e. if you don't look at a door that is closing, it won't continue to close until you look at it again). To get around this limitation, the player has the ability to place a "camcorder" that provides a live view of a distant location, meaning that the object that the camera can see acts as if it is being viewed by the player.
+**Out of Focus** is a top-down 2D puzzle adventure game with limited field of vision in which only objects that are within the player's field of view are active (i.e. if you don't look at a door that is closing, it won't continue to close until you look at it again). To get around this limitation, the player has the ability to place a "camcorder" that provides a live view of a distant location, meaning that the object that the camera can see acts as if it is being viewed by the player.
 
 Premise / Setting
 -------
-**THIS IS WHERE SOMEONE PUTS SOME STORYLINE TO FIT THIS GAME!**
+"I've always been called narrow sighted... and narrow minded. <br />
+In my world, things only existif if I know about it. <br />
+As a result, the people around me have left, leaving me alone. <br />
+So I stay here in my house. <br />
+Creating puzzles for myself. <br />
+Hoping that one day, I can see as the world sees..."
+
+
 
 
 Platform
@@ -38,15 +45,15 @@ Core Gameplay
 Get to the exit. Don't die or you restart the level.
 
 ####**What the Player Can Do**
-+ WASD movement (8-directional)
++ W,A,S,D movement (8-directional)
 + Field of vision points in the direction of the mouse
 + Left click to interact
 + Right click to pick up/put down "camcorder"
 + Player can die (i.e. door closes on player, player falls down pit)
 + Player can restart the level at will
-+ (*) Player can close eyes
-+ (*) Player can turn on/off lights in some rooms to increase/decrease range of vision
-+ (*) Player can look at mirrors to reflect his field of vision around corners/back at himself, etc.
++ (-) Player can close eyes
++ (-) Player can turn on/off lights in some rooms to increase/decrease range of vision
++ (-) Player can look at mirrors to reflect his field of vision around corners/back at himself, etc.
 
 ###What the Player Cannot Do
 + Player (i.e. the person actually playing the game) cannot see the whole level at once (camera/screen is smaller than the level)
