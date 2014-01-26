@@ -15,19 +15,30 @@ public class Door : MonoBehaviour {
 	
 	public Transform t_button;
 	public bool b_canOpen = false;
+	public Transform t_visibilityIcon;
 	
 	Animator animator;
 	
 	public bool b_IsOpen = false; //changeable from the inspector.
-	
-	void Start(){
-		animator = transform.GetComponent<Animator>();
 
-		InvokeRepeating ("CheckIfIsSeen", 0.5f, 0.3f);
+	void Awake(){
+		transform.GetComponent<FunctionIfVisible> ().RegisterHasVision (CheckNotSeen);
 	}
 
-	void CheckIfIsSeen(){
+	void Start(){
+		animator = transform.GetComponent<Animator>();
+	}
+
+	void CheckNotSeen(){
+		if (!b_canOpen)
+			t_visibilityIcon.renderer.enabled = true;
 		b_canOpen = false;
+	}
+
+	public void IsSeen(){
+		b_canOpen = true;
+
+		t_visibilityIcon.renderer.enabled = false;
 	}
 
 	#region Used By Other Scripts

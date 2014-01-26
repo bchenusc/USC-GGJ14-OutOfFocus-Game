@@ -59,8 +59,7 @@ public class FOV : MonoBehaviour {
 
 	void HitSeeVaryingObject( RaycastHit2D hit){
 		if (hit.transform.CompareTag("Door")){
-			Debug.Log("End");
-			hit.transform.GetComponent<Door>().b_canOpen = true;
+			hit.transform.GetComponent<Door>().IsSeen();
 		}
 	}
 }
