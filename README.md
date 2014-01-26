@@ -17,6 +17,7 @@ Drawing from quantum physics, **[1337 GAME TITLE]** explores the concept of how 
 Terminology and Symbols
 -------
 (*) represents tentative and/or subject-to-change implementation(s)
+(-) represents suggested idea but not implementated
 
 Overview
 -------
@@ -65,7 +66,7 @@ Level Design Implementation
 + Buttons
 + Walls
 + Pitfall
-+ (*) Light Switches
++ (-) Light Switches
 
 
 Artistic Direction 
