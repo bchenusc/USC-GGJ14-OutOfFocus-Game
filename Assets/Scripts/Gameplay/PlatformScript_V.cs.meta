@@ -1,0 +1,10 @@
+fileFormatVersion: 2
+guid: 6ea00685706ab45fea7be178da43c8e3
+MonoImporter:
+  serializedVersion: 2
+  defaultReferences:
+  - upSprite: {fileID: 21300002, guid: 47f78a6cb4f8b0841be46045a9f42595, type: 3}
+  - downSprite: {fileID: 21300000, guid: 47f78a6cb4f8b0841be46045a9f42595, type: 3}
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 

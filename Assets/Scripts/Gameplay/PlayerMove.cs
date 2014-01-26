@@ -26,10 +26,15 @@ public class PlayerMove : MonoBehaviour {
 	private List<GameObject> nearbyCameras;
 	#endregion
 
+	#region playform variables
+	public bool onPlatform { get; set; }
+	#endregion
+
 	void Awake () {
 		cameraPrefab = Resources.Load<GameObject>("Prefabs/Camera");
 		pickupCameraPrefab = Resources.Load<GameObject>("Prefabs/CameraPressSpace");
 		nearbyCameras = new List<GameObject>();
+		onPlatform = false;
 
 		// HACKS to forcibly spawn these to singletons at the beginning of every level
 		GameManager.Instance.ToString();
