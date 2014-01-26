@@ -57,7 +57,7 @@ Get to the exit. Don't die or you restart the level.
 
 ###What the Player Cannot Do
 + Player (i.e. the person actually playing the game) cannot see the whole level at once (camera/screen is smaller than the level)
-+ Player cannot move through the "camcorder" he/she places - it is impassable terrain
++ (-) Player cannot move through the "camcorder" he/she places - it is impassable terrain
 
 ####The Vision Mechanic
 The player's vision is represented as a cone in the direction of the mouse that is about 41.1 degrees. Objects within the field of vision (FOV) are active (affected by mechanisms and player interaction), and vice versa. Objects retain momentum when no longer observed, that is if the player slams a door, the door will retain its speed and momentum upon being observed again and continue to close. 
