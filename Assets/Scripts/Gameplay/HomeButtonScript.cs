@@ -14,6 +14,6 @@ public class HomeButtonScript : MonoBehaviour {
 	}
 
 	void OnMouseDown() {
-		// Go to menu
+		Application.LoadLevel ("Title-Screen");
 	}
 }

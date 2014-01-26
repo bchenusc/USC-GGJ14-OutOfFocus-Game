@@ -14,6 +14,6 @@ public class TitleAboutButtonScript : MonoBehaviour {
 	}
 
 	void OnMouseDown() {
-		//DO MORE STUFF
+		Application.LoadLevel("About-Screen");
 	}
 }

@@ -35,10 +35,6 @@ public class PlayerMove : MonoBehaviour {
 		pickupCameraPrefab = Resources.Load<GameObject>("Prefabs/CameraPressSpace");
 		nearbyCameras = new List<GameObject>();
 		onPlatform = false;
-
-		// HACKS to forcibly spawn these to singletons at the beginning of every level
-		GameManager.Instance.ToString();
-		AudioManager.Instance.ToString();
 	}
 
 	void Start () {
