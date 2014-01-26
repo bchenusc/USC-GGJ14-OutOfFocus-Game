@@ -33,10 +33,16 @@ public class PlayerMove : MonoBehaviour {
 	public float f_horiz = 0f;
 	public float f_vertical = 0f;
 	public float f_maxSpeed=4.0f; //horizontal only
-	public enum Facing { up, down, left, right};
+	public enum Facing { none, up, down, left, right};
+	public Facing direction = Facing.down;
 	//------------------------------------
 	
 	Animator animator;
+
+	public Sprite upFacing;
+	public Sprite downFacing;
+	public Sprite leftFacing;
+	public Sprite rightFacing;
 	
 	void Start () {
 		//InputManager.Instance.RegisterOnKeyHeld(HandleInput);
@@ -51,58 +57,71 @@ public class PlayerMove : MonoBehaviour {
 
 
 		if (Mathf.Abs (f_horiz) < 0.1f && Mathf.Abs(f_vertical) < 0.1f) {
+			direction = Facing.none;
+			animator.SetInteger("Facing", 0);
 			rigidbody2D.velocity = Vector3.zero;
 		}else{
 			rigidbody2D.velocity = new Vector3(f_horiz * f_maxSpeed, f_vertical * f_maxSpeed, 0);
 		}
 
-		//vertical
-		if (f_vertical > 0.1f) {
-
-		} else if (f_vertical < -0.1f) {
-
-		}
 
 		//horizontal
 		if (f_horiz > 0.1f) {
-
+			direction = Facing.right;
 		}
-		else if (f_vertical < -0.1f){
-
+		else if (f_horiz < -0.1f){
+			direction = Facing.left;
 		}
+
+		//vertical
+		if (f_vertical > 0.1f) {
+			direction = Facing.up;
+		} else if (f_vertical < -0.1f) {
+			direction = Facing.down;
+		}
+
+		if (direction != Facing.none)
+			Face (direction);
 
 	}
 
 	private void Face(Facing f){
 		if (f == Facing.up) {
 			//look up
-			animator.SetInteger("Facing", 0);
+			if (animator.GetInteger("Facing") != 1){
+			animator.SetInteger("Facing", 1);
+			
+			}
+			transform.GetComponent<SpriteRenderer>().sprite = upFacing;
 		}
 		else if (f==Facing.down){
 			//look down
-			animator.SetInteger("Facing", 1);
+			animator.SetInteger("Facing", 2);
+			transform.GetComponent<SpriteRenderer>().sprite = downFacing;
 		}
 		else if (f==Facing.left){
 			//look left
-			animator.SetInteger("Facing", 2);
+			Vector3 theScale = transform.localScale;
+			if (theScale.x > 0){
+				theScale.x *= -1;
+				transform.localScale = theScale;
+			}
+			animator.SetInteger("Facing", 3);
+			transform.GetComponent<SpriteRenderer>().sprite = leftFacing;
 		}
 		else if (f==Facing.right){
 			//look right
-			animator.SetInteger("Facing", 3);
+			// Multiply the player's x local scale by -1.
+			Vector3 theScale = transform.localScale;
+			if (theScale.x < 0){
+				theScale.x *= -1;
+				transform.localScale = theScale;
+			}
+
+			animator.SetInteger("Facing", 4);
+			transform.GetComponent<SpriteRenderer>().sprite = leftFacing;
 		}
 	}
-	
-	private void Animate(){
-		//Check if there is an animator. If there is no animator, then do not animate
-		if (animator == null || animator.runtimeAnimatorController == null)
-			return;
-		
-		try
-		{
-			//Handle animation here.
-			animator.SetFloat("Speed", Mathf.Abs(rigidbody2D.velocity.x));
-		}
-		catch{}
-	}
+
 	#endregion
 }
