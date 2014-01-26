@@ -3,6 +3,7 @@ using System.Collections;
 
 public class CameraScript : MonoBehaviour {
 	Transform player;
+
 	
 	// Use this for initialization
 	void Awake () {
@@ -13,4 +14,6 @@ public class CameraScript : MonoBehaviour {
 	void Update () {
 		transform.position = new Vector3(player.position.x, player.position.y, transform.position.z);
 	}
+
+
 }

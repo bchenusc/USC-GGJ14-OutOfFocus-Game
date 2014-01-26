@@ -2,29 +2,6 @@
 using System.Collections;
 using System.Collections.Generic;
 
-/*
- * How to use this class?
- * 1. Place the class on the player character with the colliders. 
- * 2. Ensure the player has a collider 2D and rigidbody 2D attached.
- * 3. Ensure the player is tagged as player and on the player layer.
- * 4. Customize float numbers located at the top of the script to tweak horizontal movement values.
- * 
- * Notes:
- * Class Handles:
- * 		LEFT GROUNDED
- * 		LEFT RISING
- * 		RIGHT GROUNDED
- * 		RIGHT RISING
- * 
- * Does NOT handle:
- * 		MOVING UP
- * 		MOVING DOWN
- * 		COLLISION
- * 
- * @Brian Chen
- * 
-*/
-
 [RequireComponent (typeof (Rigidbody2D))]
 [RequireComponent (typeof (Animator))]
 
