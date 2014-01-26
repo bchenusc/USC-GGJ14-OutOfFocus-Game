@@ -31,10 +31,11 @@ public class DoorButton : MonoBehaviour {
 	void OnTriggerEnter2D(Collider2D other){
 		if (other.CompareTag("Player") && HACK_canReTrigger){
 			HACK_canReTrigger = false; //HACK--Used only because OnTriggerEnter2D in Unity is buggy!
-			b_IsPressed = !b_IsPressed;
-			animator.SetBool("ButtonPress", true);
-			scr_doorScript.ToggleDoor();
-			AudioManager.Instance.PlaySoundEffect("button_start", gameObject);
+			if (scr_doorScript.ToggleDoor());{
+				b_IsPressed = !b_IsPressed;
+				animator.SetBool("ButtonPress", true);
+				AudioManager.Instance.PlaySoundEffect("button_start", gameObject);
+			}
 		}
 	}
 	
