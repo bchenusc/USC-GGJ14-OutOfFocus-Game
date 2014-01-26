@@ -6,9 +6,10 @@ public class VisionCameraScript : MonoBehaviour {
 	public LayerMask fov_hit;
 	public LayerMask fov_hit2;
 
-	void Update(){
-		CameraFOV ();
+	void Start(){
+		InvokeRepeating ("CameraFOV", 0f, 0.1f);
 	}
+
 
 	void CameraFOV(){
 
