@@ -68,8 +68,10 @@ public class PlayerMove : MonoBehaviour {
 				direction = Facing.down;
 			}
 		}
+		if (Mathf.Abs (f_horiz) < 0.1f && Mathf.Abs(f_vertical) < 0.1f){
 
-		Face(direction);
+			Face(direction);
+		}
 
 	}
 
@@ -80,11 +82,24 @@ public class PlayerMove : MonoBehaviour {
 
 
 		if (Mathf.Abs (f_horiz) < 0.1f && Mathf.Abs(f_vertical) < 0.1f) {
-			direction = Facing.none;
 			rigidbody2D.velocity = Vector3.zero;
-				animator.SetInteger("Facing", 0);
+			Debug.Log (direction);
+			Face (direction);
 		}else{
 			rigidbody2D.velocity = new Vector3(f_horiz * f_maxSpeed, f_vertical * f_maxSpeed, 0);
+			if (direction == Facing.up){
+				Face(Facing.moveUp);
+			}else
+			if (direction == Facing.down){
+				Face(Facing.moveDown);
+			}else
+			if (direction == Facing.left){
+				Face(Facing.moveLeft);
+			}else
+			if (direction == Facing.right){
+				Face(Facing.moveRight);
+			}
+		
 		}
 	}
 
