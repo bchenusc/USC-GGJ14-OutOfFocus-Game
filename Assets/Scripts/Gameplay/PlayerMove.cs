@@ -1,5 +1,6 @@
 ﻿using UnityEngine;
 using System.Collections;
+using System.Collections.Generic;
 
 /*
  * How to use this class?
@@ -43,11 +44,12 @@ public class PlayerMove : MonoBehaviour {
 	private GameObject cameraPrefab;
 	private int numCameras = 1;
 	private bool cameraNearby = false;
-	private GameObject nearbyCamera = null;
+	private List<GameObject> nearbyCameras;
 	#endregion
 
 	void Awake () {
 		cameraPrefab = Resources.Load<GameObject>("Prefabs/Camera");
+		nearbyCameras = new List<GameObject>();
 	}
 
 	void Start () {
@@ -95,9 +97,9 @@ public class PlayerMove : MonoBehaviour {
 			}
 		}
 		if (Input.GetKeyDown(KeyCode.F)) {
-			if (nearbyCamera != null) {
-				Destroy(nearbyCamera);
-				nearbyCamera = null;
+			if (nearbyCameras.Count > 0) {
+				Destroy(nearbyCameras[0]);
+				nearbyCameras.RemoveAt(0);
 				numCameras++;
 			}
 		}
@@ -105,13 +107,13 @@ public class PlayerMove : MonoBehaviour {
 
 	void OnTriggerEnter2D(Collider2D other) {
 		if (other.CompareTag("Camcorder")) {
-			nearbyCamera = other.gameObject;
+			nearbyCameras.Add(other.gameObject);
 		}
 	}
 
 	void OnTriggerExit2D(Collider2D other) {
 		if (other.CompareTag("Camcorder")) {
-			nearbyCamera = null;
+			nearbyCameras.Remove(other.gameObject);
 		}
 	}
 	#endregion
