@@ -26,9 +26,8 @@ public class AudioManager : Singleton<AudioManager> {
 		sounds["levelEnd"] = Resources.Load<AudioClip>("Audio/Sounds/levelEnd");
 	}
 	
-	// Update is called once per frame
-	void Update () {
-		
+	public void Mute () {
+		GameManager.Instance.player.GetComponent<AudioListener>().enabled = !GameManager.Instance.player.GetComponent<AudioListener>().enabled;
 	}
 
 	public void PlayMusic(string toPlay, float volume = 0.08f) {

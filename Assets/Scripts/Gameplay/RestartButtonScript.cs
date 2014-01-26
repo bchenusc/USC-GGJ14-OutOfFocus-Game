@@ -14,6 +14,6 @@ public class RestartButtonScript : MonoBehaviour {
 	}
 
 	void OnMouseDown() {
-		Application.LoadLevel(0);
+		Application.LoadLevel(GameManager.Instance.currentLevel);
 	}
 }

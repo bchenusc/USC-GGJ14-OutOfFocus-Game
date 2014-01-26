@@ -11,13 +11,16 @@ public class GameManager : Singleton<GameManager> {
 
 	#region playerStats
 	//private int numCameras = 0;
-	private int currentLevel = 0;
+	private GameObject _player;
+	public GameObject player {
+		get { return _player; }
+	}
+	public int currentLevel = 0;
 	private int furthestLevel = 0;
 	#endregion
 
-	// Update is called once per frame
-	void Update () {
-		
+	void Awake() {
+		_player = GameObject.FindGameObjectWithTag("Player");
 	}
 
 	public void LevelEnd() {

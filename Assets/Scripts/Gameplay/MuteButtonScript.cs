@@ -15,5 +15,6 @@ public class MuteButtonScript : MonoBehaviour {
 
 	void OnMouseDown() {
 		// Add Mute Stuff
+		AudioManager.Instance.Mute();
 	}
 }
