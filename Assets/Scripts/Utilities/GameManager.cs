@@ -23,6 +23,7 @@ public class GameManager : Singleton<GameManager> {
 	void Awake() {
 		_player = GameObject.FindGameObjectWithTag("Player");
 		playerAlive = true;
+		InputManager.Instance.RegisterOnKeyPressed(PlayerRestart);
 	}
 
 	public void LevelEnd() {
@@ -31,7 +32,20 @@ public class GameManager : Singleton<GameManager> {
 		if (currentLevel > furthestLevel) {
 			furthestLevel = currentLevel;
 		}
-		// load next level after some delay
+		TimerManager.Instance.Add("nextLevel",
+		                          LoadNextLevel,
+		                          2.0f,
+		                          false);
+	}
+
+	public void LoadNextLevel() {
+		Application.LoadLevel(currentLevel);
+	}
+
+	public void PlayerRestart() {
+		if (Input.GetKeyDown(KeyCode.R)) {
+			RestartLevel();
+		}
 	}
 
 	public void RestartLevel() {

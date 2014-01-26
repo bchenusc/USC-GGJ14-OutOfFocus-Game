@@ -44,7 +44,7 @@ public class PlayerMove : MonoBehaviour {
 	private GameObject cameraPrefab;
 	private GameObject pickupCameraPrefab;
 	private GameObject pickupCamera = null;
-	private int numCameras = 1;
+	private int numCameras = 0;
 	private bool cameraNearby = false;
 	private List<GameObject> nearbyCameras;
 	#endregion
@@ -53,6 +53,10 @@ public class PlayerMove : MonoBehaviour {
 		cameraPrefab = Resources.Load<GameObject>("Prefabs/Camera");
 		pickupCameraPrefab = Resources.Load<GameObject>("Prefabs/CameraPressSpace");
 		nearbyCameras = new List<GameObject>();
+
+		// HACKS to forcibly spawn these to singletons at the beginning of every level
+		GameManager.Instance.ToString();
+		AudioManager.Instance.ToString();
 	}
 
 	void Start () {
