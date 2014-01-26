@@ -2,7 +2,7 @@
 using System.Collections;
 using System.Collections.Generic;
 
-public class PlatformScript : MonoBehaviour {
+public class PlatformScript_V : MonoBehaviour {
 
 	public bool startUp = false;
 	public float speed = 1.5f;
