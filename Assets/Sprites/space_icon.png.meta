@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: cb2210efd6e1cac45b92fd70d4b0ca60
+guid: 56d8cceab9a2d5e4d86870da7774d8c1
 TextureImporter:
   serializedVersion: 2
   mipmaps:
@@ -45,7 +45,7 @@ TextureImporter:
     compressionQuality: 50
   spriteSheet:
     sprites:
-    - name: camera_sheet_0
+    - name: space_icon_0
       rect:
         serializedVersion: 2
         x: 0
@@ -54,19 +54,10 @@ TextureImporter:
         height: 64
       alignment: 0
       pivot: {x: .5, y: .5}
-    - name: camera_sheet_1
+    - name: space_icon_1
       rect:
         serializedVersion: 2
         x: 64
-        y: 0
-        width: 64
-        height: 64
-      alignment: 0
-      pivot: {x: .5, y: .5}
-    - name: camera_sheet_2
-      rect:
-        serializedVersion: 2
-        x: 128
         y: 0
         width: 64
         height: 64
