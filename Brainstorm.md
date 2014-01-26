@@ -3,6 +3,27 @@ Global Game Jam 2014
 "We don’t see things as they are, we see them as we are." 
 
 ------
+
+**Potential Title**
+1. Fuck the Judges (ALL)
+2. Kitten with a Camcorder (David)
+3. It's a Dating Sim (Brian)
+4. + Narrow Sided (David)
+5. Narrow Minded (David)
+6. Narrow Penis (David)
+7. + Out of Focus (Jeffrey)
+8. In Focus (David)
+9. Always A Love Story (Brian)
+10. It's Not A Cat (Josh)
+11. It's Not A Cat, It's a Dating Sim (Josh)
+12. The World Revolves Around You (Jeff)
+13. Global Camcorder Jam (Brian)
+14. + Where's My Camera (Brian)
+15. Your Mom Is A Fucking Camera (Matt)
+16. It's Not A Camera, It's a Camcorder (Bryan)
+17. Lighter Than Camera (Josh)
+
+------
 ### **Brainstorming Ideas**
 1.	[X] You possess certain things or people and you see certain perspectives based on the inanimate / animate object. Solve a puzzle.
 2.	[X] Dating: You date a bunch of girls, it falls through. Brian's dating simulation featuring B.C. You realize you're gay at the end.
