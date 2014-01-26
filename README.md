@@ -3,7 +3,7 @@ Out of Focus
 **Lead Programmers:** Matthew Pohlmann, Brian Chen <br/>
 **Programmers:** Bryan Chong, Jeffrey Chau <br/>
 **Lead Artist:** Josh DiGiovanni <br/>
-**Lead Designer:** Omar Khulusi, David Zhang <br/>
+**Designers:** Omar Khulusi, David Zhang <br/>
 **Documentation / Floater:** Bryan Chong <br/>
 
 This is the Game Design Document for **Out of Focus** built for the 2014 Global Game Jam. This documentation describes our vision of the game.
