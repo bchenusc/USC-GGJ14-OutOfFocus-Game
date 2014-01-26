@@ -26,7 +26,7 @@ public class PlayerMove : MonoBehaviour {
 	private List<GameObject> nearbyCameras;
 	#endregion
 
-	#region playform variables
+	#region platform variables
 	public bool onPlatform { get; set; }
 	#endregion
 
@@ -121,8 +121,11 @@ public class PlayerMove : MonoBehaviour {
 				pickupCamera = Instantiate(pickupCameraPrefab, 
 				                           new Vector3(other.transform.position.x + .4f, other.transform.position.y + .4f, 0),
 				                           Quaternion.identity) as GameObject;
+				pickupCamera.transform.parent = other.transform;
 			}
-			nearbyCameras.Add(other.gameObject);
+			if (!nearbyCameras.Contains(other.gameObject)) {
+				nearbyCameras.Add(other.gameObject);
+			}
 		}
 	}
 
