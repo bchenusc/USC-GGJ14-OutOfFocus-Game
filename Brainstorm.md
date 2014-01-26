@@ -4,7 +4,7 @@ Global Game Jam 2014
 
 ------
 
-**Potential Title**
+**Potential Title:** <br/>
 1. Fuck the Judges <br/>
 2. Kitten with a Camcorder <br/>
 3. It's a Dating Sim <br/>
