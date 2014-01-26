@@ -33,23 +33,46 @@ public class PlayerMove : MonoBehaviour {
 	public float f_horiz = 0f;
 	public float f_vertical = 0f;
 	public float f_maxSpeed=4.0f; //horizontal only
-	public enum Facing { none, up, down, left, right};
+	public enum Facing { none, moveUp, moveDown, moveLeft, moveRight, up, down, left, right};
 	public Facing direction = Facing.down;
 	//------------------------------------
 	
 	Animator animator;
 
-	public Sprite upFacing;
-	public Sprite downFacing;
-	public Sprite leftFacing;
-	public Sprite rightFacing;
 	
 	void Start () {
 		//InputManager.Instance.RegisterOnKeyHeld(HandleInput);
 		animator = transform.GetComponent<Animator>();
 	}
 
-	#region Private functions
+	void Update(){
+
+		Vector3 playerToMouse =  Camera.main.ScreenToWorldPoint(Input.mousePosition) - transform.position;
+		playerToMouse.z = 0;
+		if (Mathf.Abs(playerToMouse.x) > Mathf.Abs(playerToMouse.y)) {
+			playerToMouse = new Vector3( Mathf.Sign(playerToMouse.x) * 1, 0, 0);
+			if (playerToMouse.x > 0){
+				direction = Facing.right;
+
+			}else
+			{
+				direction = Facing.left;
+			}
+		}else {
+			playerToMouse = new Vector3( 0, Mathf.Sign(playerToMouse.y) * 1, 0);
+
+			if (playerToMouse.y > 0){
+				direction = Facing.up;
+			}else
+			{
+				direction = Facing.down;
+			}
+		}
+
+		Face(direction);
+
+	}
+
 	void FixedUpdate(){
 	
 		f_horiz = Input.GetAxisRaw("Horizontal"); //Gather input
@@ -58,46 +81,23 @@ public class PlayerMove : MonoBehaviour {
 
 		if (Mathf.Abs (f_horiz) < 0.1f && Mathf.Abs(f_vertical) < 0.1f) {
 			direction = Facing.none;
-			animator.SetInteger("Facing", 0);
 			rigidbody2D.velocity = Vector3.zero;
+				animator.SetInteger("Facing", 0);
 		}else{
 			rigidbody2D.velocity = new Vector3(f_horiz * f_maxSpeed, f_vertical * f_maxSpeed, 0);
 		}
-
-
-		//horizontal
-		if (f_horiz > 0.1f) {
-			direction = Facing.right;
-		}
-		else if (f_horiz < -0.1f){
-			direction = Facing.left;
-		}
-
-		//vertical
-		if (f_vertical > 0.1f) {
-			direction = Facing.up;
-		} else if (f_vertical < -0.1f) {
-			direction = Facing.down;
-		}
-
-		if (direction != Facing.none)
-			Face (direction);
-
 	}
 
 	private void Face(Facing f){
 		if (f == Facing.up) {
 			//look up
-			if (animator.GetInteger("Facing") != 1){
-			animator.SetInteger("Facing", 1);
-			
-			}
-			transform.GetComponent<SpriteRenderer>().sprite = upFacing;
+			animator.SetInteger("Facing", 5);
+
 		}
 		else if (f==Facing.down){
 			//look down
-			animator.SetInteger("Facing", 2);
-			transform.GetComponent<SpriteRenderer>().sprite = downFacing;
+			animator.SetInteger("Facing", 6);
+
 		}
 		else if (f==Facing.left){
 			//look left
@@ -106,8 +106,8 @@ public class PlayerMove : MonoBehaviour {
 				theScale.x *= -1;
 				transform.localScale = theScale;
 			}
-			animator.SetInteger("Facing", 3);
-			transform.GetComponent<SpriteRenderer>().sprite = leftFacing;
+			animator.SetInteger("Facing", 7);
+
 		}
 		else if (f==Facing.right){
 			//look right
@@ -118,10 +118,38 @@ public class PlayerMove : MonoBehaviour {
 				transform.localScale = theScale;
 			}
 
+			animator.SetInteger("Facing", 8);
+		}
+		if (f == Facing.moveUp) {
+			//look up
+			animator.SetInteger("Facing", 1);
+			
+		}
+		else if (f==Facing.moveDown){
+			//look down
+			animator.SetInteger("Facing", 2);
+			
+		}
+		else if (f==Facing.moveLeft){
+			//look left
+			Vector3 theScale = transform.localScale;
+			if (theScale.x > 0){
+				theScale.x *= -1;
+				transform.localScale = theScale;
+			}
+			animator.SetInteger("Facing", 3);
+			
+		}
+		else if (f==Facing.moveRight){
+			//look right
+			// Multiply the player's x local scale by -1.
+			Vector3 theScale = transform.localScale;
+			if (theScale.x < 0){
+				theScale.x *= -1;
+				transform.localScale = theScale;
+			}
+			
 			animator.SetInteger("Facing", 4);
-			transform.GetComponent<SpriteRenderer>().sprite = leftFacing;
 		}
 	}
-
-	#endregion
 }

@@ -1,5 +1,9 @@
 fileFormatVersion: 2
+<<<<<<< HEAD
 guid: badff3863ff740a4ca38cc56185dd0e8
+=======
+guid: 8fa8a2914cc5540ab88e3b134b5a8550
+>>>>>>> 7d8229d3732ad9e76a15bdc4756ceaf4cd37fcd8
 TextureImporter:
   serializedVersion: 2
   mipmaps:
@@ -24,6 +28,7 @@ TextureImporter:
   maxTextureSize: 1024
   textureSettings:
     filterMode: -1
+<<<<<<< HEAD
     aniso: 1
     mipBias: -1
     wrapMode: 1
@@ -31,11 +36,24 @@ TextureImporter:
   lightmap: 0
   compressionQuality: 50
   spriteMode: 2
+=======
+    aniso: -1
+    mipBias: -1
+    wrapMode: -1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 1
+>>>>>>> 7d8229d3732ad9e76a15bdc4756ceaf4cd37fcd8
   spriteExtrude: 1
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: .5, y: .5}
+<<<<<<< HEAD
   spritePixelsToUnits: 64
+=======
+  spritePixelsToUnits: 100
+>>>>>>> 7d8229d3732ad9e76a15bdc4756ceaf4cd37fcd8
   alphaIsTransparency: 1
   textureType: 8
   buildTargetSettings:
@@ -44,6 +62,7 @@ TextureImporter:
     textureFormat: -2
     compressionQuality: 50
   spriteSheet:
+<<<<<<< HEAD
     sprites:
     - name: outside_wall_0
       rect:
@@ -81,5 +100,8 @@ TextureImporter:
         height: 64
       alignment: 0
       pivot: {x: .5, y: .5}
+=======
+    sprites: []
+>>>>>>> 7d8229d3732ad9e76a15bdc4756ceaf4cd37fcd8
   spritePackingTag: 
   userData: 

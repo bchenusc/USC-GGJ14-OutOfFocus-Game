@@ -65,10 +65,11 @@ Level Design Implementation
 + Buttons
 + Walls
 + Pitfall
-+ Light Switches
++ (*) Light Switches
+
 
 Artistic Direction 
 -------
 + Cute character
 + Pastel color scheme - low stress environment
-+ Skewed perspective (strict top-down gameplay) - see Pokemon for inspiration
++ Skewed perspective (strict top-down gameplay) - see Pokémon for inspiration
