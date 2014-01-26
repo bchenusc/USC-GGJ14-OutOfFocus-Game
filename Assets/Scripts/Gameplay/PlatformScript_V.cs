@@ -73,7 +73,11 @@ public class PlatformScript_V : MonoBehaviour {
 		}
 	}
 
-	void Move() {
+	public void Move() {
 		rBody.velocity = Vector2.up * speed;
+	}
+
+	public void Stop(){
+		rBody.velocity = Vector3.zero;
 	}
 }

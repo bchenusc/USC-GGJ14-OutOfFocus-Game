@@ -38,14 +38,14 @@ public class FOV : MonoBehaviour {
 		playerToMouse = Vector3.Normalize (playerToMouse);
 
 		//Raycassting
-		hit = Physics2D.Raycast (pivot.position, playerToMouse, 3.0f , fov_hit);
+		hit = Physics2D.Raycast (pivot.position, playerToMouse, 4.0f , fov_hit);
 
-		//Debug.DrawRay (pivot.position, playerToMouse * 3);
+		Debug.DrawRay (pivot.position, playerToMouse * 3);
 		if (hit!=null && hit.transform != null) {
 
 			Vector3 distance = new Vector3(hit.point.x, hit.point.y, 0) - transform.position;
 			distance.z = 0;
-			transform.localScale = new Vector3 (Mathf.Clamp(Vector3.Magnitude(distance) / 3.0f, 0.05f, 1),  Mathf.Clamp(distance.magnitude / 3.0f, 0.05f, 1) , transform.localScale.z);
+			transform.localScale = new Vector3 (Mathf.Clamp(Vector3.Magnitude(distance) / 4.0f, 0.05f, 1.5f),  Mathf.Clamp(distance.magnitude / 4.0f, 0.05f, 1.5f) , transform.localScale.z);
 
 			HitSeeVaryingObject(hit);
 
