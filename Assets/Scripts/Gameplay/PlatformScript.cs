@@ -4,16 +4,16 @@ using System.Collections.Generic;
 
 public class PlatformScript : MonoBehaviour {
 
-	public bool active;
+	public bool p_active;
 
 	// Use this for initialization
 	void Start () {
-		active = false;
+		p_active = false;
 	}
 	
 	// Update is called once per frame
 	void Update () {
-		if (active) {
+		if (p_active) {
 			//Move and do stuff
 		}
 	}

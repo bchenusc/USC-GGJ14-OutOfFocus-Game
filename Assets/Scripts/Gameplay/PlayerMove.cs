@@ -83,7 +83,7 @@ public class PlayerMove : MonoBehaviour {
 
 		if (Mathf.Abs (f_horiz) < 0.1f && Mathf.Abs(f_vertical) < 0.1f) {
 			rigidbody2D.velocity = Vector3.zero;
-			Debug.Log (direction);
+			//Debug.Log (direction);
 			Face (direction);
 		}else{
 			rigidbody2D.velocity = new Vector3(f_horiz * f_maxSpeed, f_vertical * f_maxSpeed, 0);
