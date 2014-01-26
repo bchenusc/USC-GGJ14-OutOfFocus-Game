@@ -26,7 +26,7 @@ public class Door : MonoBehaviour {
 	#region Used By Other Scripts
 	public void ToggleDoor(){
 		b_IsOpen = !b_IsOpen;
-		transform.GetComponent<BoxCollider2D>().isTrigger = true;
+		transform.GetComponent<BoxCollider2D>().isTrigger = b_IsOpen;
 		animator.SetBool("DoorOpen", b_IsOpen);
 	}
 	
