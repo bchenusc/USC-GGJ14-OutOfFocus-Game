@@ -50,34 +50,34 @@ TextureImporter:
         serializedVersion: 2
         x: 0
         y: 0
-        width: 64
+        width: 128
         height: 64
       alignment: 0
       pivot: {x: .5, y: .5}
     - name: red_door_sheet_2_1
       rect:
         serializedVersion: 2
-        x: 64
+        x: 128
         y: 0
-        width: 64
+        width: 128
         height: 64
       alignment: 0
       pivot: {x: .5, y: .5}
     - name: red_door_sheet_2_2
       rect:
         serializedVersion: 2
-        x: 128
+        x: 256
         y: 0
-        width: 64
+        width: 128
         height: 64
       alignment: 0
       pivot: {x: .5, y: .5}
     - name: red_door_sheet_2_3
       rect:
         serializedVersion: 2
-        x: 192
+        x: 384
         y: 0
-        width: 64
+        width: 128
         height: 64
       alignment: 0
       pivot: {x: .5, y: .5}
