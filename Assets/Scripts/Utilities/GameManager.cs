@@ -17,10 +17,12 @@ public class GameManager : Singleton<GameManager> {
 	}
 	public int currentLevel = 0;
 	private int furthestLevel = 0;
+	public bool playerAlive { get; set; }
 	#endregion
 
 	void Awake() {
 		_player = GameObject.FindGameObjectWithTag("Player");
+		playerAlive = true;
 	}
 
 	public void LevelEnd() {
@@ -33,7 +35,15 @@ public class GameManager : Singleton<GameManager> {
 	}
 
 	public void RestartLevel() {
+		Application.LoadLevel(currentLevel);
+	}
 
+	void OnLevelWasLoaded(int level) {
+		// assuming menu is level 0
+		//if (level > 0) {
+			_player = GameObject.FindGameObjectWithTag("Player");
+			playerAlive = true;
+		//}
 	}
 
 

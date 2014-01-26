@@ -4,7 +4,8 @@ using System.Collections;
 public class PitfallScript : MonoBehaviour {
 	
 	void OnTriggerEnter2D(Collider2D other){
-		if (other.CompareTag("Player")){
+		if (other.CompareTag("Player") && GameManager.Instance.playerAlive){
+			GameManager.Instance.playerAlive = false;
 			Destroy(other.transform.parent.FindChild("Vision").gameObject);
 			other.transform.GetComponent<Animator>().SetInteger("Facing", 6);
 			other.transform.GetComponent<Rigidbody2D>().velocity = Vector3.zero;
@@ -24,6 +25,6 @@ public class PitfallScript : MonoBehaviour {
 	}
 
 	void RestartLevel() {
-		Application.LoadLevel(GameManager.Instance.currentLevel);
+		GameManager.Instance.RestartLevel();
 	}
 }
