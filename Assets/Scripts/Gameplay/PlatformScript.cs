@@ -43,15 +43,15 @@ public class PlatformScript : MonoBehaviour {
 				sRenderer.sprite = downSprite;
 			}
 		} else if (other.CompareTag("Player")) {
-			//other.gameObject.GetComponent<Rigidbody2D>().velocity += rBody.velocity;
 			other.transform.parent.parent = transform;
+			other.gameObject.GetComponent<PlayerMove>().onPlatform = true;
 		}
 	}
 
 	void OnTriggerExit2D (Collider2D other) {
 		if (other.CompareTag("Player")) {
-			//other.gameObject.GetComponent<Rigidbody2D>().velocity -= rBody.velocity;
 			other.transform.parent.parent = null;
+			other.gameObject.GetComponent<PlayerMove>().onPlatform = false;
 		}
 	}
 

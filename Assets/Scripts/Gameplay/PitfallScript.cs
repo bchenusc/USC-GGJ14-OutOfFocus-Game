@@ -4,7 +4,7 @@ using System.Collections;
 public class PitfallScript : MonoBehaviour {
 	
 	void OnTriggerEnter2D(Collider2D other){
-		if (other.CompareTag("Player") && GameManager.Instance.playerAlive){
+		if (other.CompareTag("Player") && GameManager.Instance.playerAlive && !other.gameObject.GetComponent<PlayerMove>().onPlatform){
 			GameManager.Instance.playerAlive = false;
 			Destroy(other.transform.parent.FindChild("Player_Vision").gameObject);
 			other.transform.GetComponent<Animator>().SetInteger("Facing", 6);

@@ -26,6 +26,10 @@ public class PlayerMove : MonoBehaviour {
 	private List<GameObject> nearbyCameras;
 	#endregion
 
+	#region playform variables
+	public bool onPlatform { get; set; }
+	#endregion
+
 	void Awake () {
 		cameraPrefab = Resources.Load<GameObject>("Prefabs/Camera");
 		pickupCameraPrefab = Resources.Load<GameObject>("Prefabs/CameraPressSpace");
