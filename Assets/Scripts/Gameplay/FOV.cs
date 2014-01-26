@@ -5,8 +5,28 @@ public class FOV : MonoBehaviour {
 	
 	public Transform pivot;
 	public LayerMask fov_hit;
+	public RaycastHit2D hit;
 
+	Door[] doors;
+	
+	void Start(){
+		doors = GameObject.FindObjectsOfType<Door>();
+	}
 
+	void HitSeeVaryingObject( RaycastHit2D hit){
+		
+		foreach (Door aDoor in doors){
+			if (aDoor.transform == hit.transform){
+				aDoor.b_canOpen = true;
+				aDoor.transform.GetComponent<FunctionIfVisible>().AddNode(this.GetType().ToString(), false);
+			}
+			else {
+				aDoor.b_canOpen = false;
+				aDoor.transform.GetComponent<FunctionIfVisible>().AddNode(this.GetType().ToString(), true);
+			}
+		}
+	}
+	
 	// Update is called once per frame
 	void Update () {
 		transform.position = pivot.position;
@@ -18,7 +38,7 @@ public class FOV : MonoBehaviour {
 		playerToMouse = Vector3.Normalize (playerToMouse);
 
 		//Raycassting
-		RaycastHit2D hit = Physics2D.Raycast (pivot.position, playerToMouse, 3.0f , fov_hit);
+		hit = Physics2D.Raycast (pivot.position, playerToMouse, 3.0f , fov_hit);
 
 		//Debug.DrawRay (pivot.position, playerToMouse * 3);
 		if (hit!=null && hit.transform != null) {
@@ -26,6 +46,8 @@ public class FOV : MonoBehaviour {
 			Vector3 distance = new Vector3(hit.point.x, hit.point.y, 0) - transform.position;
 			distance.z = 0;
 			transform.localScale = new Vector3 (Mathf.Clamp(Vector3.Magnitude(distance) / 3.0f, 0.05f, 1),  Mathf.Clamp(distance.magnitude / 3.0f, 0.05f, 1) , transform.localScale.z);
+
+			HitSeeVaryingObject(hit);
 
 		}else {
 			transform.localScale = Vector3.one;

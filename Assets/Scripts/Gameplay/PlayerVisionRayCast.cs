@@ -6,20 +6,25 @@ public class PlayerVisionRayCast : MonoBehaviour {
 
 	public LayerMask fov_hit2;
 	Door[] doors;
+	public RaycastHit2D hit2;
+
 
 	void Start(){
 		doors = GameObject.FindObjectsOfType<Door>();
+
+
+		InvokeRepeating ("CastRay", 0, 0.2f);
 	}
 
 	// Update is called once per frame
-	void FixedUpdate () {
+	void CastRay () {
 
 		Vector3 playerToMouse =  Camera.main.ScreenToWorldPoint(Input.mousePosition) - transform.position;
 		playerToMouse.z = 0;
 		playerToMouse = Vector3.Normalize (playerToMouse);
 
 		Debug.DrawRay (transform.position, playerToMouse * 3);
-		RaycastHit2D hit2 = Physics2D.Raycast (transform.position , playerToMouse, 3.0f, fov_hit2);
+		hit2 = Physics2D.Raycast (transform.position , playerToMouse, 3.0f, fov_hit2);
 		if (hit2 != null && hit2.transform != null){
 			HitSeeVaryingObject(hit2);
 		}
@@ -32,12 +37,13 @@ public class PlayerVisionRayCast : MonoBehaviour {
 
 			foreach (Door aDoor in doors){
 				if (aDoor.transform == hit.transform){
+					Debug.Log("HI" + gameObject.GetInstanceID());
 					aDoor.b_canOpen = true;
-					aDoor.transform.GetComponent<FunctionIfVisible>().isVisible = false;
+				aDoor.transform.GetComponent<FunctionIfVisible>().AddNode(this.GetType().ToString(), false);
 				}
 				else {
 					aDoor.b_canOpen = false;
-					aDoor.transform.GetComponent<FunctionIfVisible>().isVisible = true;
+				aDoor.transform.GetComponent<FunctionIfVisible>().AddNode(this.GetType().ToString(), true);
 				}
 			}
 	}
@@ -45,7 +51,7 @@ public class PlayerVisionRayCast : MonoBehaviour {
 	void NotHittingAnything(){
 		foreach (Door aDoor in doors){
 				aDoor.b_canOpen = false;
-				aDoor.transform.GetComponent<FunctionIfVisible>().isVisible = true;
+			aDoor.transform.GetComponent<FunctionIfVisible>().AddNode(this.GetType().ToString(), true);
 		}
 	}
 }

@@ -79,7 +79,6 @@ public class PlayerMove : MonoBehaviour {
 			if (numCameras > 0) {
 				numCameras--;
 				Quaternion rotation = GetQuaternionOfCamera();
-				Debug.Log (rotation);
 				Instantiate(cameraPrefab, transform.position, rotation);
 			}
 		}

@@ -15,6 +15,7 @@ public class Door : MonoBehaviour {
 	
 	public Transform t_button;
 	public bool b_canOpen = false;
+	
 
 	
 	Animator animator;
