@@ -19,7 +19,7 @@ public class CameraVisionRayCast : MonoBehaviour {
 	// Update is called once per frame
 	void CastRay () {
 
-		Debug.DrawRay (transform.position, transform.up* 3);
+		//Debug.DrawRay (transform.position, transform.up* 3);
 		hit2 = Physics2D.Raycast (transform.position , transform.up, 3.0f, fov_hit2);
 		if (hit2 != null && hit2.transform != null){
 			HitSeeVaryingObject(hit2);

@@ -26,8 +26,8 @@ public class PlayerVisionRayCast : MonoBehaviour {
 		playerToMouse.z = 0;
 		playerToMouse = Vector3.Normalize (playerToMouse);
 
-		Debug.DrawRay (transform.position, playerToMouse * 3);
-		hit2 = Physics2D.Raycast (transform.position , playerToMouse, 3.0f, fov_hit2);
+		//Debug.DrawRay (transform.position, playerToMouse * 4);
+		hit2 = Physics2D.Raycast (transform.position , playerToMouse, 4.0f, fov_hit2);
 		if (hit2 != null && hit2.transform != null){
 			HitSeeVaryingObject(hit2);
 		}
