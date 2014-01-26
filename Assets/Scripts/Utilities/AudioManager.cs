@@ -21,7 +21,8 @@ public class AudioManager : Singleton<AudioManager> {
 
 		// Load sound effects
 		//sounds["sword"] = Resources.Load<AudioClip>("Audio/Sounds/sword");
-		sounds["button"] = Resources.Load<AudioClip>("Audio/Sounds/button");
+		sounds["button_end"] = Resources.Load<AudioClip>("Audio/Sounds/button_end");
+		sounds["button_start"] = Resources.Load<AudioClip>("Audio/Sounds/button_start");
 		sounds["levelEnd"] = Resources.Load<AudioClip>("Audio/Sounds/levelEnd");
 	}
 	

@@ -34,7 +34,7 @@ public class DoorButton : MonoBehaviour {
 			b_IsPressed = !b_IsPressed;
 			animator.SetBool("ButtonPress", true);
 			scr_doorScript.ToggleDoor();
-			AudioManager.Instance.PlaySoundEffect("button", gameObject);
+			AudioManager.Instance.PlaySoundEffect("button_start", gameObject);
 		}
 	}
 	
@@ -42,6 +42,7 @@ public class DoorButton : MonoBehaviour {
 		if (other.CompareTag("Player") && !HACK_canReTrigger){
 			HACK_canReTrigger = true;
 			animator.SetBool("ButtonPress", false);
+			AudioManager.Instance.PlaySoundEffect("button_end", gameObject);
 		}
 	}
 	

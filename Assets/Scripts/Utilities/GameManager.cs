@@ -20,5 +20,18 @@ public class GameManager : Singleton<GameManager> {
 		
 	}
 
+	public void LevelEnd() {
+		Debug.Log("Beat level " + currentLevel + "!");
+		currentLevel++;
+		if (currentLevel > furthestLevel) {
+			furthestLevel = currentLevel;
+		}
+		// load next level after some delay
+	}
+
+	public void RestartLevel() {
+
+	}
+
 
 }
