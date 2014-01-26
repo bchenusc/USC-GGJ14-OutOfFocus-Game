@@ -10,13 +10,13 @@ This is the Game Design Document for **Out of Focus** built for the 2014 Global 
 
 > We don’t see things as they are, we see them as we are. (Anaïs Nin)
 
-Drawing from quantum physics, **Out of Focus** explores the concept of how we, humans, perceive the working world. Objects can only function when being perceived, rather than existing through the laws of normative physics. Each human being possess an individual understanding of the world that consists of only their immediate surroundings; anything else bears no significance to the individual.
+Drawing from quantum physics, Out of Focus explores the concept of how we, humans, perceive the working world. Objects can only function when being perceived, rather than existing through the laws of normative physics. Each human being possess an individual understanding of the world that consists of only their immediate surroundings; anything else bears no significance to the individual.
 
 -------
 
 Terminology and Symbols
 -------
-(*) represents tentative and/or subject-to-change implementation(s)
+(*) represents tentative and/or subject-to-change implementation(s) <br />
 (-) represents suggested idea but not implementated
 
 Overview
@@ -26,7 +26,7 @@ Overview
 Premise / Setting
 -------
 "I've always been called narrow sighted... and narrow minded. <br />
-In my world, things only existif if I know about it. <br />
+In my world, things only exist if if I know about it. <br />
 As a result, the people around me have left, leaving me alone. <br />
 So I stay here in my house. <br />
 Creating puzzles for myself. <br />
@@ -60,7 +60,7 @@ Get to the exit. Don't die or you restart the level.
 + Player cannot move through the "camcorder" he/she places - it is impassable terrain
 
 ####The Vision Mechanic
-The player's vision is represented as a cone in the direction of the mouse that is (*) about 60 degrees (subject to permanent change or in-game change by a game mechanic). Objects within the field of vision (FOV) are active (affected by mechanisms and player interaction), and vice versa. Objects retain momentum when no longer observed, that is if the player slams a door, the door will retain its speed and momentum upon being observed again and continue to close. 
+The player's vision is represented as a cone in the direction of the mouse that is about 41.1 degrees. Objects within the field of vision (FOV) are active (affected by mechanisms and player interaction), and vice versa. Objects retain momentum when no longer observed, that is if the player slams a door, the door will retain its speed and momentum upon being observed again and continue to close. 
 
 Level Design Implementation
 -------
