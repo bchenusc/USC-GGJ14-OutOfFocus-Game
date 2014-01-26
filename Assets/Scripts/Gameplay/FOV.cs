@@ -50,7 +50,9 @@ public class FOV : MonoBehaviour {
 
 	void OnTriggerEnter2D(Collider2D other){
 		if (other.transform != transform && other.transform != pivot){
+			if (other.transform.CompareTag("Door")){
 
+			}
 		}
 	}
 
