@@ -2,34 +2,19 @@
 using System.Collections;
 
 public class FunctionIfVisible : MonoBehaviour {
-
-	public Action CheckNotSeen;
-
+	
+	public Transform t_visibilityIcon;
+	public bool isVisible = true;
 
 	// Use this for initialization
 	void Start () {
 		
-		InvokeRepeating ("IsSeen", 0.5f, 0.1f);
+		InvokeRepeating ("IsSeen", 0.5f, 0.24f);
 	}
 	
 
 	private void IsSeen(){
-		if (CheckNotSeen!=null){
-			CheckNotSeen ();
-		}
+			t_visibilityIcon.renderer.enabled = isVisible;
 	}
-
-	public bool RegisterHasVision(Action callback){
-		try{
-			CheckNotSeen += callback;
-		return true;
-		}catch {return false;}
-	}
-
-	public bool DeRegisterHasVision(Action callback){
-		try{
-			CheckNotSeen -= callback;
-			return true;
-		}catch {return false;}
-	}
+	
 }
