@@ -4,17 +4,32 @@ using System.Collections.Generic;
 
 public class PlatformScript : MonoBehaviour {
 
-	public bool p_active;
+	public bool startUp = false;
+	public float speed = 1.5f;
+
+	private Rigidbody2D rBody;
+	private Transform collider1;
+	private Transform collider2;
+
+	void Awake () {
+		rBody = gameObject.GetComponent<Rigidbody2D>();
+		collider1 = transform.FindChild("Collider1");
+		collider2 = transform.FindChild("Collider2");
+	}
 
 	// Use this for initialization
 	void Start () {
-		p_active = false;
+		if (startUp) {
+			rBody.velocity = Vector2.up * speed;
+		} else {
+			rBody.velocity = Vector2.up * -speed;
+		}
 	}
-	
-	// Update is called once per frame
-	void Update () {
-		if (p_active) {
-			//Move and do stuff
+
+	void OnTriggerEnter2D (Collider2D other) {
+		if (other.transform == collider1 || other.transform == collider2) {
+			speed *= -1;
+			rBody.velocity = Vector2.up * speed;
 		}
 	}
 }
