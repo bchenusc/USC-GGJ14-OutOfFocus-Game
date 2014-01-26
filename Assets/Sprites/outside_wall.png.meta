@@ -90,5 +90,14 @@ TextureImporter:
         height: 64
       alignment: 0
       pivot: {x: .5, y: .5}
+    - name: outside_wall_5
+      rect:
+        serializedVersion: 2
+        x: 192
+        y: 0
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: .5, y: .5}
   spritePackingTag: 
   userData: 
