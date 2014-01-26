@@ -8,6 +8,7 @@ public class PlatformScript : MonoBehaviour {
 	public float speed = 1.5f;
 	public Sprite upSprite;
 	public Sprite downSprite;
+	public GameObject[] sidePlatforms;
 
 	private Rigidbody2D rBody;
 	private SpriteRenderer sRenderer;
@@ -39,8 +40,18 @@ public class PlatformScript : MonoBehaviour {
 			TimerManager.Instance.Add(gameObject.GetInstanceID() + "waitToMove", Move, 2.0f, false);
 			if (speed > 0) {
 				sRenderer.sprite = upSprite;
+				if (sidePlatforms != null) {
+					foreach (GameObject p in sidePlatforms) {
+						p.GetComponent<SpriteRenderer>().sprite = upSprite;
+					}
+				}
 			} else {
 				sRenderer.sprite = downSprite;
+				if (sidePlatforms != null) {
+					foreach (GameObject p in sidePlatforms) {
+						p.GetComponent<SpriteRenderer>().sprite = downSprite;
+					}
+				}
 			}
 		} else if (other.CompareTag("Player") && GameManager.Instance.playerAlive) {
 			other.transform.parent.parent = transform;
