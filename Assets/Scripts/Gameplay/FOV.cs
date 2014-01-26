@@ -5,6 +5,7 @@ public class FOV : MonoBehaviour {
 	
 	public Transform pivot;
 	public LayerMask fov_hit;
+	public LayerMask fov_hit2;
 
 	// Update is called once per frame
 	void Update () {
@@ -18,17 +19,26 @@ public class FOV : MonoBehaviour {
 
 		//Raycassting
 		RaycastHit2D hit = Physics2D.Raycast (pivot.position, playerToMouse, 3.0f , fov_hit);
+		RaycastHit2D hit2 = Physics2D.Raycast (pivot.position, playerToMouse, 3.0f, fov_hit2);
 		Debug.DrawRay (pivot.position, playerToMouse * 3);
 		if (hit!=null && hit.transform != null) {
 
 			Vector3 distance = new Vector3(hit.point.x, hit.point.y, 0) - transform.position;
 			distance.z = 0;
 			transform.localScale = new Vector3 (Mathf.Clamp(Vector3.Magnitude(distance) / 3.0f, 0.05f, 1),  Mathf.Clamp(distance.magnitude / 3.0f, 0.05f, 1) , transform.localScale.z);
+
+			HitSeeVaryingObject(hit);
+
 		}else {
 			transform.localScale = Vector3.one;
 		}
 
-
+		if (hit2 != null && hit2.transform != null){
+			Debug.Log (hit2.transform);
+			HitSeeVaryingObject(hit2);
+		}
+		
+		
 		//Rotation
 		float angle = Mathf.Acos ((Vector3.Dot (playerToMouse, Vector3.right )));
 		if (angle > Mathf.PI && angle < Mathf.PI * 2) {
@@ -47,19 +57,10 @@ public class FOV : MonoBehaviour {
 
 	}
 
-	void OnTriggerEnter2D(Collider2D other){
-		if (other.transform != transform && other.transform != pivot){
-			if (other.transform.CompareTag("Door")){
-				other.transform.GetComponent<Door>().b_canOpen = true;
-			}
+	void HitSeeVaryingObject( RaycastHit2D hit){
+		if (hit.transform.CompareTag("Door")){
+			Debug.Log("End");
+			hit.transform.GetComponent<Door>().b_canOpen = true;
 		}
-	}
-
-	void OnTriggerExit2D(Collider2D other){
-			Debug.Log ("in trigger");
-			if (other.transform.CompareTag("Door")){
-				Debug.Log("in door");
-				other.transform.GetComponent<Door>().b_canOpen = false;
-			}
 	}
 }

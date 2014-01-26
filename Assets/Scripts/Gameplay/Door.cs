@@ -22,8 +22,14 @@ public class Door : MonoBehaviour {
 	
 	void Start(){
 		animator = transform.GetComponent<Animator>();
+
+		InvokeRepeating ("CheckIfIsSeen", 0.5f, 0.3f);
 	}
-	
+
+	void CheckIfIsSeen(){
+		b_canOpen = false;
+	}
+
 	#region Used By Other Scripts
 	public bool ToggleDoor(){
 		if (!b_canOpen) return false;
