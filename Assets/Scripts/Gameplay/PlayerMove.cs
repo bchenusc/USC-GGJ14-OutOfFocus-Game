@@ -102,10 +102,10 @@ public class PlayerMove : MonoBehaviour {
 		case Facing.moveUp: return Quaternion.identity;
 		case Facing.down: return Quaternion.AngleAxis(180, Vector3.forward);
 		case Facing.moveDown : return Quaternion.AngleAxis(180, Vector3.forward);
-		case Facing.left : return Quaternion.AngleAxis(90, Vector3.forward);
-		case Facing.moveLeft: return Quaternion.AngleAxis(90, Vector3.forward);
-		case Facing.right : return Quaternion.AngleAxis(270, Vector3.forward);
-		case Facing.moveRight : return Quaternion.AngleAxis (270, Vector3.forward);
+		case Facing.left : return Quaternion.AngleAxis(270, Vector3.forward);
+		case Facing.moveLeft: return Quaternion.AngleAxis(270, Vector3.forward);
+		case Facing.right : return Quaternion.AngleAxis(90, Vector3.forward);
+		case Facing.moveRight : return Quaternion.AngleAxis (90, Vector3.forward);
 		default: return Quaternion.identity;
 		}
 	}
