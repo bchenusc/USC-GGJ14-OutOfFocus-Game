@@ -17,10 +17,10 @@ public class AudioManager : Singleton<AudioManager> {
 		sounds = new Dictionary<string, AudioClip>();
 
 		// Load music
-		music["MainTheme"] = Resources.Load<AudioClip>("Audio/Music/MainTheme");
+		//music["MainTheme"] = Resources.Load<AudioClip>("Audio/Music/MainTheme");
 
 		// Load sound effects
-		sounds["sword"] = Resources.Load<AudioClip>("Audio/Sounds/sword");
+		//sounds["sword"] = Resources.Load<AudioClip>("Audio/Sounds/sword");
 	}
 	
 	// Update is called once per frame
