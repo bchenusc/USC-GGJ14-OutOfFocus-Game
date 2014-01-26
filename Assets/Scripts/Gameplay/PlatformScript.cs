@@ -35,7 +35,8 @@ public class PlatformScript : MonoBehaviour {
 	void OnTriggerEnter2D (Collider2D other) {
 		if (other.transform == collider1 || other.transform == collider2) {
 			speed *= -1;
-			rBody.velocity = Vector2.up * speed;
+			rBody.velocity = Vector2.zero;
+			TimerManager.Instance.Add(gameObject.GetInstanceID() + "waitToMove", Move, 2.0f, false);
 			if (speed > 0) {
 				sRenderer.sprite = upSprite;
 			} else {
@@ -52,5 +53,9 @@ public class PlatformScript : MonoBehaviour {
 			//other.gameObject.GetComponent<Rigidbody2D>().velocity -= rBody.velocity;
 			other.transform.parent.parent = null;
 		}
+	}
+
+	void Move() {
+		rBody.velocity = Vector2.up * speed;
 	}
 }
