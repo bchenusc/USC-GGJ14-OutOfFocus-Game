@@ -39,9 +39,20 @@ public class PlayerMove : MonoBehaviour {
 	
 	Animator animator;
 
-	
+	#region camcorder variables
+	private GameObject cameraPrefab;
+	private int numCameras = 1;
+	private bool cameraNearby = false;
+	private GameObject nearbyCamera = null;
+	#endregion
+
+	void Awake () {
+		cameraPrefab = Resources.Load<GameObject>("Prefabs/Camera");
+	}
+
 	void Start () {
 		//InputManager.Instance.RegisterOnKeyHeld(HandleInput);
+		InputManager.Instance.RegisterOnKeyPressed(PlaceCamera);
 		animator = transform.GetComponent<Animator>();
 	}
 
@@ -74,6 +85,36 @@ public class PlayerMove : MonoBehaviour {
 		}
 
 	}
+
+	#region camcorder functions
+	void PlaceCamera() {
+		if (Input.GetKeyDown(KeyCode.Space)) {
+			if (numCameras > 0) {
+				numCameras--;
+				Instantiate(cameraPrefab, transform.position, Quaternion.identity);
+			}
+		}
+		if (Input.GetKeyDown(KeyCode.F)) {
+			if (nearbyCamera != null) {
+				Destroy(nearbyCamera);
+				nearbyCamera = null;
+				numCameras++;
+			}
+		}
+	}
+
+	void OnTriggerEnter2D(Collider2D other) {
+		if (other.CompareTag("Camcorder")) {
+			nearbyCamera = other.gameObject;
+		}
+	}
+
+	void OnTriggerExit2D(Collider2D other) {
+		if (other.CompareTag("Camcorder")) {
+			nearbyCamera = null;
+		}
+	}
+	#endregion
 
 	void FixedUpdate(){
 	
