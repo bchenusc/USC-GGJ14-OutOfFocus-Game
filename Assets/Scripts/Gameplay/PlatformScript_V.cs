@@ -78,6 +78,6 @@ public class PlatformScript_V : MonoBehaviour {
 	}
 
 	public void Stop(){
-		rBody.velocity = Vector3.zero;
+		//rBody.velocity = Vector3.zero;
 	}
 }

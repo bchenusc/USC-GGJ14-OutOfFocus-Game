@@ -40,7 +40,7 @@ public class FOV : MonoBehaviour {
 		//Raycassting
 		hit = Physics2D.Raycast (pivot.position, playerToMouse, 4.0f , fov_hit);
 
-		Debug.DrawRay (pivot.position, playerToMouse * 3);
+		//Debug.DrawRay (pivot.position, playerToMouse * 3);
 		if (hit!=null && hit.transform != null) {
 
 			Vector3 distance = new Vector3(hit.point.x, hit.point.y, 0) - transform.position;

@@ -51,21 +51,21 @@ public class PlayerVisionRayCast : MonoBehaviour {
 
 		foreach (PlatformScript_H aDoor in platformH){
 			if (aDoor.transform == hit.transform){
-				aDoor.Move();
+				//aDoor.Move();
 			}
 			else {
 
-				aDoor.Stop();
+				//aDoor.Stop();
 			}
 		}
 
 		foreach (PlatformScript_V aDoor in platformV){
 			if (aDoor.transform == hit.transform){
-				aDoor.Move();
+				//aDoor.Move();
 			}
 			else {
 
-				aDoor.Stop();
+				//aDoor.Stop();
 			}
 		}
 	}

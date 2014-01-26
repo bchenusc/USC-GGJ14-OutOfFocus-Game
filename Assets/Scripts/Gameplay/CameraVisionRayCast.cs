@@ -44,21 +44,21 @@ public class CameraVisionRayCast : MonoBehaviour {
 
 		foreach (PlatformScript_H aDoor in platformH){
 			if (aDoor.transform == hit.transform){
-				aDoor.Move();
+				//aDoor.Move();
 			}
 			else {
-				if (Vector3.SqrMagnitude(aDoor.transform.position - transform.position)< 10)
-					aDoor.Stop();
+				//if (Vector3.SqrMagnitude(aDoor.transform.position - transform.position)< 10)
+					//aDoor.Stop();
 			}
 		}
 		
 		foreach (PlatformScript_V aDoor in platformV){
 			if (aDoor.transform == hit.transform){
-				aDoor.Move();
+				//aDoor.Move();
 			}
 			else {
-				if (Vector3.SqrMagnitude(aDoor.transform.position - transform.position)< 10)
-					aDoor.Stop();
+				//if (Vector3.SqrMagnitude(aDoor.transform.position - transform.position)< 10)
+					//aDoor.Stop();
 			}
 		}
 	}
