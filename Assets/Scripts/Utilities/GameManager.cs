@@ -49,6 +49,7 @@ public class GameManager : Singleton<GameManager> {
 	}
 
 	public void RestartLevel() {
+		TimerManager.Instance.RemoveAll();
 		Application.LoadLevel(currentLevel);
 	}
 

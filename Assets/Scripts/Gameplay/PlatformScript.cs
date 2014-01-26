@@ -42,7 +42,7 @@ public class PlatformScript : MonoBehaviour {
 			} else {
 				sRenderer.sprite = downSprite;
 			}
-		} else if (other.CompareTag("Player")) {
+		} else if (other.CompareTag("Player") && GameManager.Instance.playerAlive) {
 			other.transform.parent.parent = transform;
 			other.gameObject.GetComponent<PlayerMove>().onPlatform = true;
 		}

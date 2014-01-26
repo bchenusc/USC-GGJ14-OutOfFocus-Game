@@ -131,5 +131,16 @@ public class TimerManager : Singleton<TimerManager> {
 			return false;
 		}
 	}
+
+	public bool RemoveAll() {
+		foreach (TimerInstance t in sl_active.Values) {
+			t.b_removeMe = true;
+		}
+		foreach (TimerInstance t in sl_pending.Values) {
+			t.b_removeMe = true;
+		}
+
+		return true;
+	}
 	
 }
