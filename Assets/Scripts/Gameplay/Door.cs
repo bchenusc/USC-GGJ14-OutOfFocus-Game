@@ -22,7 +22,7 @@ public class Door : MonoBehaviour {
 	public bool b_IsOpen = false; //changeable from the inspector.
 
 	void Awake(){
-		transform.GetComponent<FunctionIfVisible> ().RegisterHasVision (CheckNotSeen);
+		//transform.GetComponent<FunctionIfVisible> ().RegisterHasVision (CheckNotSeen);
 	}
 
 	void Start(){
