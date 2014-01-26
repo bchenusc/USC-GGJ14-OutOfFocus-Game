@@ -42,6 +42,8 @@ public class PlayerMove : MonoBehaviour {
 
 	#region camcorder variables
 	private GameObject cameraPrefab;
+	private GameObject pickupCameraPrefab;
+	private GameObject pickupCamera = null;
 	private int numCameras = 1;
 	private bool cameraNearby = false;
 	private List<GameObject> nearbyCameras;
@@ -49,6 +51,7 @@ public class PlayerMove : MonoBehaviour {
 
 	void Awake () {
 		cameraPrefab = Resources.Load<GameObject>("Prefabs/Camera");
+		pickupCameraPrefab = Resources.Load<GameObject>("Prefabs/CameraPressSpace");
 		nearbyCameras = new List<GameObject>();
 	}
 
@@ -90,13 +93,15 @@ public class PlayerMove : MonoBehaviour {
 
 	#region camcorder functions
 	void PlaceCamera() {
-		if (Input.GetKeyDown(KeyCode.Space)) {
+		// 'C' to place a camcorder
+		if (Input.GetKeyDown(KeyCode.C)) {
 			if (numCameras > 0) {
 				numCameras--;
 				Instantiate(cameraPrefab, transform.position, Quaternion.identity);
 			}
 		}
-		if (Input.GetKeyDown(KeyCode.F)) {
+		// 'Space' to pick up camcorder
+		if (Input.GetKeyDown(KeyCode.Space)) {
 			if (nearbyCameras.Count > 0) {
 				Destroy(nearbyCameras[0]);
 				nearbyCameras.RemoveAt(0);
@@ -107,6 +112,11 @@ public class PlayerMove : MonoBehaviour {
 
 	void OnTriggerEnter2D(Collider2D other) {
 		if (other.CompareTag("Camcorder")) {
+			if (nearbyCameras.Count == 0) {
+				pickupCamera = Instantiate(pickupCameraPrefab, 
+				                           new Vector3(other.transform.position.x + .25f, other.transform.position.y + .25f, 0),
+				                           Quaternion.identity) as GameObject;
+			}
 			nearbyCameras.Add(other.gameObject);
 		}
 	}
@@ -114,6 +124,10 @@ public class PlayerMove : MonoBehaviour {
 	void OnTriggerExit2D(Collider2D other) {
 		if (other.CompareTag("Camcorder")) {
 			nearbyCameras.Remove(other.gameObject);
+		}
+		if (nearbyCameras.Count == 0 && pickupCamera != null) {
+			Destroy(pickupCamera);
+			pickupCamera = null;
 		}
 	}
 	#endregion
