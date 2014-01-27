@@ -16,14 +16,16 @@ public class PlatformScript_H : MonoBehaviour {
 	private Transform collider2;
 
 	void Awake () {
-		sRenderer = gameObject.GetComponent<SpriteRenderer>();
-		rBody = gameObject.GetComponent<Rigidbody2D>();
-		collider1 = transform.FindChild("Collider1");
-		collider2 = transform.FindChild("Collider2");
+
 	}
 
 	// Use this for initialization
 	void Start () {
+		sRenderer = gameObject.GetComponent<SpriteRenderer>();
+		rBody = gameObject.GetComponent<Rigidbody2D>();
+		collider1 = transform.FindChild("Collider1");
+		collider2 = transform.FindChild("Collider2");
+
 		if (startRight) {
 			rBody.velocity = Vector2.right * speed;
 			sRenderer.sprite = rightSprite;

@@ -35,6 +35,13 @@ public class InputManager : Singleton<InputManager> {
 			OnKeyHeld();
 	}
 
+	public void Reset () {
+		OnLeftMouseButtonDown = null;
+		OnRightMouseButtonDown = null;
+		OnKeyPressed = null;
+		OnKeyHeld = null;
+	}
+
 	#region register functions
 	public void RegisterOnLeftMouseButtonDown(Action a) {
 		OnLeftMouseButtonDown += a;

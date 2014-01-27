@@ -20,7 +20,7 @@ public class GameManager : Singleton<GameManager> {
 	public bool playerAlive { get; set; }
 	#endregion
 
-	void Awake() {
+	void Start () {
 		_player = GameObject.FindGameObjectWithTag("Player");
 		playerAlive = true;
 		InputManager.Instance.RegisterOnKeyPressed(PlayerRestart);
@@ -49,16 +49,16 @@ public class GameManager : Singleton<GameManager> {
 	}
 
 	public void RestartLevel() {
+		InputManager.Instance.Reset();
 		TimerManager.Instance.RemoveAll();
-		Application.LoadLevel(currentLevel);
+		_player = null;
+		playerAlive = false;
+		Application.LoadLevel(Application.loadedLevel);
 	}
 
 	void OnLevelWasLoaded(int level) {
-		// assuming menu is level 0
-		//if (level > 0) {
-			_player = GameObject.FindGameObjectWithTag("Player");
-			playerAlive = true;
-		//}
+		_player = GameObject.FindGameObjectWithTag("Player");
+		playerAlive = true;
 	}
 
 

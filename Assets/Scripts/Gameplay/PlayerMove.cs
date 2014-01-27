@@ -31,14 +31,14 @@ public class PlayerMove : MonoBehaviour {
 	#endregion
 
 	void Awake () {
+
+	}
+
+	void Start () {
 		cameraPrefab = Resources.Load<GameObject>("Prefabs/Camera");
 		pickupCameraPrefab = Resources.Load<GameObject>("Prefabs/CameraPressSpace");
 		nearbyCameras = new List<GameObject>();
 		onPlatform = false;
-	}
-
-	void Start () {
-		//InputManager.Instance.RegisterOnKeyHeld(HandleInput);
 		InputManager.Instance.RegisterOnKeyPressed(PlaceCamera);
 		animator = transform.GetComponent<Animator>();
 	}
