@@ -37,7 +37,7 @@ Hoping that one day, I can see as the world sees..."
 
 Platform
 -------
-Designed for PC using the Unity3D game engine; however, because of the nature of Unity, it should be easy to port to other platforms (including web and mobile).
+Designed for the Unity Web Player using the Unity3D game engine; however, because of the nature of Unity, it should be easy to port to other platforms (including PC/Mac and mobile).
 
 Core Gameplay
 -------
@@ -47,9 +47,9 @@ Get to the exit. Don't die or you restart the level.
 ####**What the Player Can Do**
 + W,A,S,D movement (8-directional)
 + Field of vision points in the direction of the mouse
-+ Left click to interact
-+ Right click to pick up/put down "camcorder"
-+ Player can die (i.e. door closes on player, player falls down pit)
++ Space bar to pick up "camcorder"
++ 'F' key to put down "camcorder"
++ Player can die (player falls down pit)
 + Player can restart the level at will
 + (-) Player can close eyes
 + (-) Player can turn on/off lights in some rooms to increase/decrease range of vision
@@ -60,13 +60,13 @@ Get to the exit. Don't die or you restart the level.
 + (-) Player cannot move through the "camcorder" he/she places - it is impassable terrain
 
 ####The Vision Mechanic
-The player's vision is represented as a cone in the direction of the mouse that is about 41.1 degrees. Objects within the field of vision (FOV) are active (affected by mechanisms and player interaction), and vice versa. Objects retain momentum when no longer observed, that is if the player slams a door, the door will retain its speed and momentum upon being observed again and continue to close. 
+The player's vision is represented as a cone in the direction of the mouse. Objects within the field of vision (FOV) are active (affected by mechanisms and player interaction), and vice versa.
 
 Level Design Implementation
 -------
 ####In-Game Objects
 ![Player](https://github.com/Valakor/GameJam2014/blob/master/Assets/Sprites/sm_player.png?raw=true) Player: The player is '1' arbitrary unit squared <br/>
-![Windows](https://github.com/Valakor/GameJam2014/blob/master/Assets/Sprites/sm_window.png?raw=true) Windows: You can look through but you can't pass it <br/>
+![Windows](https://github.com/Valakor/GameJam2014/blob/master/Assets/Sprites/sm_window.png?raw=true) (-) Windows: You can look through but you can't pass it <br/>
 ![Camcorder](https://github.com/Valakor/GameJam2014/blob/master/Assets/Sprites/sm_cam.png?raw=true) Camcorder: Provides same cone of vision from afar <br/>
 ![Moving platform](https://github.com/Valakor/GameJam2014/blob/master/Assets/Sprites/sm_platform.png?raw=true) Moving platform <br/>
 ![Doors](https://github.com/Valakor/GameJam2014/blob/master/Assets/Sprites/sm_door.png?raw=true) Doors <br/>
