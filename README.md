@@ -41,10 +41,10 @@ Designed for the Unity Web Player using the Unity3D game engine; however, becaus
 
 Core Gameplay
 -------
-####Objective
+#### Objective
 Get to the exit. Don't die or you restart the level.
 
-####**What the Player Can Do**
+#### **What the Player Can Do**
 + W,A,S,D movement (8-directional)
 + Field of vision points in the direction of the mouse
 + Space bar to pick up "camcorder"
@@ -55,16 +55,16 @@ Get to the exit. Don't die or you restart the level.
 + (-) Player can turn on/off lights in some rooms to increase/decrease range of vision
 + (-) Player can look at mirrors to reflect his field of vision around corners/back at himself, etc.
 
-###What the Player Cannot Do
+### What the Player Cannot Do
 + Player (i.e. the person actually playing the game) cannot see the whole level at once (camera/screen is smaller than the level)
 + (-) Player cannot move through the "camcorder" he/she places - it is impassable terrain
 
-####The Vision Mechanic
+#### The Vision Mechanic
 The player's vision is represented as a cone in the direction of the mouse. Objects within the field of vision (FOV) are active (affected by mechanisms and player interaction), and vice versa.
 
 Level Design Implementation
 -------
-####In-Game Objects
+#### In-Game Objects
 ![Player](https://github.com/Valakor/GameJam2014/blob/master/Assets/Sprites/sm_player.png?raw=true) Player: The player is '1' arbitrary unit squared <br/>
 ![Windows](https://github.com/Valakor/GameJam2014/blob/master/Assets/Sprites/sm_window.png?raw=true) (-) Windows: You can look through but you can't pass it <br/>
 ![Camcorder](https://github.com/Valakor/GameJam2014/blob/master/Assets/Sprites/sm_cam.png?raw=true) Camcorder: Provides same cone of vision from afar <br/>
