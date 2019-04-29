@@ -1,4 +1,4 @@
-Out of Focus [![Status](https://rawgit.com/bryan/bryan.github.io/master/images/inactive.svg)](#)
+Out of Focus ![status](https://img.shields.io/badge/status-inactive-red.svg)
 =======
 **Lead Programmers:** Matthew Pohlmann, Brian Chen <br/>
 **Programmers:** Bryan Chong, Jeffrey Chau <br/>
